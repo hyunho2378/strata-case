@@ -1,0 +1,8 @@
+node_modules
+dist
+.DS_Store
+
+# internal notes (not published)
+docs/
+검수_*.md
+00_*.md

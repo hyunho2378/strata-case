@@ -1,0 +1,4228 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta itemprop="name" content="km"> <!--프로젝트명-->
+    <meta itemprop="description"
+        content="KolonMall은 국내 대표 패션 기업 코오롱FnC의 공식 온라인 쇼핑몰로 출발하여, 의류·뷰티·리빙 등 다양한 카테고리의 국내외 브랜드를 입점시키며 라이프스타일 커머스 플랫폼으로 확장해왔습니다.">
+    <!--pr 디자인파일에서 처음으로 노출되는 설명글 넣기-->
+    <meta itemprop="image" content="/sns/km.jpg">
+    <!-- sns폴더에 있는 이미지 링크 (이미지 사용처는 이미지 파일명에 기재되어 있음)-->
+    <meta property="fb:app_id" content="APP_ID">
+    <meta property="og:type" content="Web Site Application Design">
+    <!--//uxui프로젝트와 bx프로젝트 type이 다름 (bx - <meta property="og:type" content="Brand eXperience Design">)-->
+    <meta property="og:title" content="km"> <!--프로젝트명-->
+    <meta property="og:url" content="/source/iframe/portfolio/km.html"> <!--pr페이지 실제url-->
+    <meta property="og:description"
+        content="KolonMall은 국내 대표 패션 기업 코오롱FnC의 공식 온라인 쇼핑몰로 출발하여, 의류·뷰티·리빙 등 다양한 카테고리의 국내외 브랜드를 입점시키며 라이프스타일 커머스 플랫폼으로 확장해왔습니다.">
+    <!--pr 디자인파일에서 처음으로 노출되는 설명글 넣기-->
+    <meta property="og:image" content="/sns/km.jpg">
+    <!-- sns폴더에 있는 이미지 링크 (이미지 사용처는 이미지 파일명에 기재되어 있음)-->
+    <meta name="title" content="doroco"><!--프로젝트명-->
+    <meta name="keywords"
+        content="PLUS-EX, PLUS X, PLUS X UX, PLUS X UI, PLUS X GUI, Web Design, Web, Interaction, kolonmall, 플러스엑스, 디자인, 유아이, 유엑스, 웹사이트, 인터렉션">
+    <!--기본적인 키워드는 그대로 쓰고 프로젝트명 및 bx인지 uxui인지만 구분해서 적당히 넣음-->
+    <meta name="keywords"
+        content="PlusX, Plus-ex, Brand Design, BX, Brand Experience, Design, Graphic Design, kolonmall, 플러스엑스, 브랜드, 브랜드디자인, 브랜드경험, 브랜드경험디자인, 디자인, 그래픽디자인, 코오롱몰">
+    <!--기본적인 키워드는 그대로 쓰고 프로젝트명 및 bx인지 uxui인지만 구분해서 적당히 넣음-->
+    <meta name="description"
+        content="KolonMall은 국내 대표 패션 기업 코오롱FnC의 공식 온라인 쇼핑몰로 출발하여, 의류·뷰티·리빙 등 다양한 카테고리의 국내외 브랜드를 입점시키며 라이프스타일 커머스 플랫폼으로 확장해왔습니다.">
+    <!--pr 디자인파일에서 처음으로 노출되는 설명글 넣기-->
+    <title>Plus X Creative Partner</title> <!--변경없음-->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="https://www.plus-ex.com/source/iframe/css/index.css" /> -->
+    <!-- ie6~9 브라우저에서 접속시 리다이렉트 시키는 코드 (ie사용자가 없다고 판단되면 지워도됨)    -->
+    <!--[if (gte IE 6)&(lte IE 9)]>
+<script>
+window.location.replace("/update.html");
+</script>
+<![endif]-->
+
+    <script type="text/javascript" src="https://www.plus-ex.com/source/iframe/js/jquery-1.11.1.min.js"></script>
+    <!-- 그동안 jquery를 사용했음 (dx팀 판단해서 지워도됨) -->
+    <!-- <script type="text/javascript" src="https://www.plus-ex.com/source/iframe/js/wow.min.js"></script> -->
+    <!-- 페이지 전체 인터렉션에 사용되는 js (jquery를 기반으로 한 오픈소스 https://wowjs.uk/) -->
+
+    <!-- pr페이지 하단에 share this 버튼 눌렀을때 노출되는 레이어에서 다양한 쉐어버튼 클릭시 반응하는 스크립트 -->
+    <script type="text/javascript">
+        history.scrollRestoration = "auto";
+        //SNS 공유
+        function sendSns(sns, url, txt) {
+            var o;
+            var _url = window.location;
+            var _tits = $('meta[itemprop=name]').attr("content");
+            var _txt = $('meta[itemprop=description]').attr("content");
+            var _img = $('meta[itemprop=image]').attr("content");
+            var _br = encodeURIComponent('\r\n');
+            switch (sns) {
+                case 'twitter':
+                    o = {
+                        method: 'popup',
+                        url: 'http://twitter.com/intent/tweet?text=' + _txt + '&url=' + _url
+                    };
+                    break;
+                case 'facebook':
+                    o = {
+                        method: 'popup',
+                        url: 'http://www.facebook.com/sharer/sharer.php?u=' + _url
+                    };
+                    break;
+                case 'google':
+                    o = {
+                        method: 'popup',
+                        url: 'https://plus.google.com/share?url=' + _url
+                    };
+                    break;
+                case 'linkedin':
+                    o = {
+                        method: 'popup',
+                        url: 'http://www.linkedin.com/shareArticle?mini=true&url=' + _url + '&summary=' + _txt + '&source=' + _img
+                    };
+                    break;
+                case 'pint':
+                    o = {
+                        method: 'popup',
+                        url: 'https://www.pinterest.com/pin/create/button/?url=' + _url + '&media=' + _img + '&description=' + _txt
+                    };
+                    break;
+                default:
+                    alert('지원하지 않는 SNS입니다.');
+                    return false;
+            }
+            switch (o.method) {
+                case 'popup':
+                    window.open(o.url);
+                    break;
+            }
+        }
+    </script>
+    <!-- <link rel="shortcut icon" href="https://www.plus-ex.com/source/iframe/img/favicon.ico">  -->
+    <!-- 변경없음 -->
+    <!-- <link type="text/css" rel="stylesheet" href="https://www.plus-ex.com/source/iframe/css/index.css"> 기본 css (수정없음) -->
+    <!-- // pr페이지 스타일은 별도의 css없이 아래 style영역에 작성합니다. -->
+    <style>
+        /* 웹폰트 정의 (거의 pretendard를 씀)*/
+        @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-std.css");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: max(6.7px, 0.52vw);
+        }
+
+        /*위에 정의된 웹폰트 세팅*/
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        ul,
+        ol,
+        li,
+        dl,
+        dt,
+        dd,
+        table,
+        th,
+        td,
+        form,
+        fieldset,
+        legend,
+        input,
+        textarea,
+        a,
+        button,
+        select,
+        section {
+            font-weight: 600;
+            font-family: "Pretendard Std", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", Helvetica Neue, "HelveticaNeue", HelveticaNeue, "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+        }
+
+        /*포트폴리오 기본값 (백그라운드색상 및 폰트 정의만 필요에 따라 변경)*/
+        .portfolio {
+            min-width: 1280px;
+            overflow-x: hidden;
+        }
+
+        body[data-loading="true"] {
+            overflow: hidden;
+        }
+
+
+        body[data-loading="false"] .dim {
+            display: none;
+        }
+
+
+        @keyframes rotate360 {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .dim {
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.3);
+            position: fixed;
+            left: 0;
+            z-index: 99999;
+            top: 0;
+        }
+
+        .loading {
+            width: 5.6rem;
+            height: 5.6rem !important;
+            animation: rotate360 1.5s linear infinite;
+            position: absolute;
+            inset: 0;
+            margin: auto;
+        }
+
+        /* 보통 프로젝트명을 첫번째 class로 사용합니다. (이건 필수는 아니며 작업자 편의에 맞게 하면 됩니다.)*/
+        .km {
+            display: flex;
+            flex-direction: column;
+        }
+
+        img,
+        video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            vertical-align: bottom;
+            pointer-events: none;
+            -webkit-user-drag: none;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        .contain {
+            width: 100%;
+        }
+
+        .video-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        video {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+        }
+
+        .video-container img {
+            position: relative;
+            z-index: 1;
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .grid-cols-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .grid-cols-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .fadeinup {
+            transform: translateY(8%);
+            visibility: hidden;
+            opacity: 0;
+            margin: 0 auto;
+        }
+
+        .fadeinup .screen {
+            margin: 0 auto;
+        }
+
+        .fadein {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        *:not(.bk) {
+            color: #391428;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            gap: 4.6rem;
+            padding: 12.4rem 0;
+            max-width: 110rem;
+            margin-left: 14rem;
+        }
+
+        .text-container .title {
+            font-size: 2.6rem;
+            font-weight: 400;
+            line-height: 3.8rem;
+        }
+
+        .text-container .content {
+            font-size: 2.6rem;
+            font-weight: 400;
+            line-height: 4.2rem;
+        }
+
+        .grid-cols-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .mockup {
+            min-width: 32rem;
+            max-width: 32rem;
+            overflow: hidden;
+            border-radius: 4.2rem;
+            display: flex;
+            flex-direction: column;
+            border: 0.5rem solid #2E1020;
+            background: #2E1020;
+            position: relative;
+            height: max-content;
+        }
+
+        /* .mockup::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #2E1020;
+        } */
+
+        .mockup img {
+            position: relative;
+            z-index: 1;
+        }
+
+        .mockup.sample {
+            height: 68.2rem;
+        }
+
+        .mockup .content-body {
+            flex: 1;
+            max-height: 53.7rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .mockup .content-body .img {
+            position: absolute;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            transform-origin: 50% 0%;
+            backface-visibility: hidden;
+        }
+
+        .mockup .content-body .center {
+            transform-origin: 0% 100%;
+        }
+
+        .mockup .content-body .clip {
+            transform: rotate(24deg);
+            transform-origin: center center;
+        }
+
+        .mockup .content-body .content {
+            z-index: 2;
+            margin: 0 auto;
+            position: absolute;
+            bottom: 5rem;
+            left: 0;
+            right: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .c-logo {
+            height: 1rem;
+            /* opacity: 0;
+            visibility: hidden; */
+        }
+
+        .c-logo img {
+            height: 100%;
+            width: auto;
+        }
+
+        .mockup.sample.no-line {
+            border: 0;
+            border-radius: 0;
+            overflow: visible;
+            background: none;
+        }
+
+        .mockup .line {
+            overflow: hidden;
+            border-radius: 4.2rem;
+            display: flex;
+            flex-direction: column;
+            border: 0.5rem solid #2E1020;
+            background: #2E1020;
+            position: relative;
+            height: 100%;
+        }
+
+        .mockup.sample .top {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 7.8rem;
+            background-image: url('https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_04.png');
+            background-size: cover;
+            z-index: 2;
+        }
+
+        .mockup.sample .lg {
+            top: 4.62rem;
+            position: absolute;
+            width: 6.4rem;
+            height: 2.34rem;
+            content: '';
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transform-origin: center;
+            background-image: url('https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_04-olo.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            will-change: auto;
+        }
+
+        .mockup .img.clip {
+            position: relative;
+            width: 100% !important;
+            height: 27rem;
+        }
+
+        .mockup .ye {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 17.7rem;
+            margin: 0 auto;
+        }
+
+        .mockup .content {
+            z-index: 999 !important;
+        }
+
+        .scrub {
+            transform: translateY(0%) scale(1.2);
+        }
+
+        .c-title {
+            font-weight: 700;
+            font-size: 2.3rem;
+            line-height: 2.9rem;
+            letter-spacing: -0.01em;
+            color: #fff;
+        }
+
+        .yUp {
+            transform: translateY(15%) scale(1.2);
+            transform-origin: transform;
+        }
+
+        .c-sub,
+        .s-sub {
+            color: rgb(225 225 225 / 60%);
+            font-size: 1rem;
+            line-height: 1.5rem;
+            font-weight: 500;
+        }
+
+        .con1 {
+            height: 128rem;
+            background-color: #391428;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .con1 .t-1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 0 1rem;
+        }
+
+        .con1 .t-1+.txt-img {
+            margin-left: 1rem;
+        }
+
+        .con1 .text-img-container {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .con1 .text-img-container .row {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 5.5rem;
+            position: relative;
+        }
+
+        .con1 .text-img-container .row:first-child {
+            top: 5.5rem;
+        }
+
+        .con1 .text-img-container .row:last-child {
+            bottom: 5.5rem;
+        }
+
+        .con1 .text-img-container .row:last-child .txt-img:last-child {
+            height: 17.5rem;
+            width: 12.7rem;
+        }
+
+        .con1 .text-img-container .txt-img {
+            height: 17.5rem;
+            position: relative;
+            left: 0;
+        }
+
+        .con1 .text-img-container .row img {
+            height: 100%;
+            width: auto;
+        }
+
+        .con1 .img-container {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .con1 .img-container .img:first-child {
+            width: 80.8rem;
+            margin-left: 34.4rem;
+            margin-top: 19.2rem;
+            transform-origin: right bottom;
+        }
+
+        .con1 .img-container .img:last-child {
+            width: 74.2rem;
+            margin-right: 30rem;
+            padding: 9rem 0 0;
+            top: 0;
+            right: 0;
+            position: absolute;
+            transform-origin: left bottom;
+        }
+
+        .bg-container {
+            height: 140rem;
+            width: calc(100% - 4.8rem);
+            margin: 0 auto;
+            border-radius: 3rem;
+            overflow: hidden;
+        }
+
+        .con2 .bg-container {
+            display: flex;
+            flex-direction: row;
+            background-color: #eaeaea;
+            font-size: 2rem;
+            line-height: 3rem;
+            font-weight: 500;
+            height: 111rem;
+        }
+
+        .con2 .box:first-child {
+            padding: 8rem 0 8rem 10.8rem;
+        }
+
+        .con2 .ico-row {
+            display: flex;
+            align-items: center;
+            padding: 0 2.6rem 0 3rem;
+        }
+
+        .con2 .line {
+            background-color: #391428;
+            height: 0.2rem;
+            width: 5rem;
+            display: block;
+        }
+
+        .con2 .line+.ico svg {
+            width: 1rem;
+            height: 1.4rem;
+        }
+
+        .con2 .img-container {
+            position: relative;
+        }
+
+        .con2 .img-container .row:first-child {
+            margin-top: 6.6rem;
+            align-items: flex-start;
+        }
+
+        .con2 .img-container .row:last-child {
+            margin-top: 4.9rem;
+        }
+
+        .con2 .img-container .img:first-child {
+            width: 33.7rem;
+        }
+
+        .con2 .img-container .img:nth-child(2) {
+            width: 17.6rem;
+            margin-left: 7.2rem;
+        }
+
+        .con2 .img-container .row:last-child .img:first-child {
+            width: 42.4rem;
+        }
+
+        .con2 .img-container .row:last-child .img:last-child {
+            position: absolute;
+            width: 12rem;
+            bottom: 0;
+            right: 0;
+        }
+
+        .con2 .row {
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .con2 .text {
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 3rem;
+            margin-top: 3rem;
+            margin-bottom: 8rem;
+        }
+
+        .con2 .text .num {
+            width: 1.6rem;
+            line-height: 1;
+            height: 1.6rem;
+            background-color: #391428;
+            border-radius: 50%;
+            color: #eaeaea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .con2 .box:last-child {
+            flex: 1;
+            position: relative;
+        }
+
+        .con2 .back {
+            padding-top: 16rem;
+            width: 40rem;
+            margin-left: auto;
+            margin-right: 9.6rem;
+        }
+
+        .con2 .front {
+            position: absolute;
+            right: 29.2rem;
+            top: 2.6rem;
+            width: 52.4rem;
+        }
+
+        .con3 {
+            position: relative;
+        }
+
+        .logo-container {
+            position: absolute;
+            width: 141.4rem;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding-bottom: 13rem;
+            margin: 0 auto;
+            z-index: 1;
+        }
+
+        .con2 .video-container:last-child {
+            height: 108.8rem;
+            position: relative;
+        }
+
+        .video-container .text-container {
+            width: 48rem;
+            gap: 2rem;
+            background: #fff;
+        }
+
+        .con2 .video-container+.video-container .text-container {
+            margin-right: 24rem;
+            margin-left: auto;
+            padding-bottom: 3.4rem;
+            padding-top: 10rem;
+        }
+
+        .con2 .bg-container+.video-container .text-container {
+            position: absolute;
+            padding: 0;
+            z-index: 9999;
+            top: 14rem;
+            right: 24rem;
+        }
+
+        .con2 .bg-container+.video-container .text-container::after {
+            content: '';
+            position: absolute;
+            width: 120%;
+            top: -1rem;
+            left: -2rem;
+            height: 130%;
+            z-index: -1;
+            background-color: #fff;
+        }
+
+        .video-container .text-container .title {
+            line-height: 2.8rem;
+            font-size: 2rem;
+        }
+
+        .video-container .text-container .content {
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+
+        .mySwiper.y {
+            /* transform: translateX(120px); */
+        }
+
+        .mySwiper.y .swiper-slide {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(20%);
+        }
+
+        .mySwiper:not(.y) .swiper-slide .bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .mySwiper:not(.y) .swiper-slide .bg img {
+            z-index: 0;
+        }
+
+        .mySwiper:not(.y) .swiper-slide:first-child .bg {
+            background-color: #495663;
+        }
+
+        .mySwiper:not(.y) .swiper-slide:nth-child(2) .bg {
+            background-color: #B39900;
+        }
+
+        .mySwiper:not(.y) .swiper-slide:nth-child(3) .bg {
+            background-color: #6A8073;
+        }
+
+        .mySwiper:not(.y) .swiper-slide:nth-child(4) .bg {
+            background-color: #4576DD;
+        }
+
+        .mySwiper:not(.y) .swiper-slide:nth-child(5) .bg {
+            background-color: #D1B5A7;
+        }
+
+        .con4 .swiper-slide {
+            width: 48rem;
+            border-radius: 3rem;
+            overflow: hidden;
+            position: relative;
+            height: 66rem;
+        }
+
+        .con4 .swiper-wrapper {
+            gap: 2.4rem;
+        }
+
+        .con4 .mySwiper {
+            margin: 0 14rem;
+        }
+
+        .con4 .mySwiper:has(.img) .content {
+            display: flex;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 1;
+            padding: 6rem 4rem;
+        }
+
+        .con4 .mySwiper:has(.img) .content p {
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 3rem;
+            letter-spacing: -0.05em;
+            color: #fff;
+        }
+
+        .con4 .mySwiper .swiper-slide:has(.ico) {
+            padding: 6rem 4rem;
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 3rem;
+            letter-spacing: -0.05em;
+        }
+
+        .con4 .mySwiper .swiper-slide .ico {
+            margin: 0 auto;
+            height: auto;
+        }
+
+        .con4 .mySwiper .swiper-slide:has(.ico) p {
+            font-weight: 400;
+        }
+
+        .con4 .mySwiper .swiper-slide:has(:not(.img)) {
+            background-color: #eaeaea;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .con4 .swiper-slide:first-child .ico {
+            width: 38rem;
+        }
+
+        .con4 .swiper-slide:nth-child(2) .ico {
+            width: 41.2rem;
+        }
+
+        .con4 .swiper-slide:nth-child(3) .ico {
+            width: 36.9rem;
+        }
+
+        .con4 .swiper-slide:nth-child(4) .ico {
+            width: 38rem;
+        }
+
+        .con4 .badge:last-child .ico {
+            margin-top: 1rem;
+        }
+
+        .con5 .v-text-container {
+            position: absolute;
+            width: max-content;
+            height: max-content;
+            inset: 0;
+            margin: auto;
+            background-color: #fff;
+            z-index: 9991;
+            text-align: center;
+        }
+
+        .con5 .v-text-container .title {
+            line-height: 6.2rem;
+            font-weight: 600;
+            font-size: 6.4rem;
+            letter-spacing: -0.01em;
+        }
+
+        .con5 .v-text-container .sub {
+            font-size: 2rem;
+            line-height: 3rem;
+            letter-spacing: -0.01em;
+            margin-top: 4rem;
+            padding: 0 0 1rem;
+            font-weight: 400;
+        }
+
+        .con6 .bg-container {
+            background: linear-gradient(180deg, #13040C -10.46%, #391428 106.25%);
+        }
+
+        .con6 .bg-container .img {
+            width: 60rem;
+            height: max-content;
+            margin: 10rem auto;
+        }
+
+        .con6 .text-container {
+            padding: 0;
+            margin-left: 24rem;
+        }
+
+        .con6 .text-container .content {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .con6 .time-container {
+            position: absolute;
+            width: 15.1rem;
+            top: 9.9rem;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            z-index: 99999;
+        }
+
+        .con6 .time-container .sub {
+            color: #fff;
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            letter-spacing: 0px;
+            margin-top: 0.2rem;
+            text-align: center;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            padding: 13.6rem 1.3rem 0;
+        }
+
+        .product-thumb-img {
+            position: absolute;
+            bottom: 0.3rem;
+            padding: 2.3rem 0;
+            position: relative;
+            z-index: 999;
+        }
+
+        .product-thumb-img::after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background-color: rgba(0, 0, 0, 0.04);
+            border-radius: 1.2rem;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .product-thumb-img .olo {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 3.6rem;
+            aspect-ratio: 1/1;
+        }
+
+        .product-thumb-ver-1 {
+            z-index: 11;
+        }
+
+        .product-thumb-ver-1 .row {
+            gap: 0.2rem;
+            font-weight: 700;
+            line-height: 1.5rem;
+            letter-spacing: -0.04em;
+            font-size: 1rem;
+            margin-top: 0.8rem;
+            justify-content: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        .product-thumb-ver-1 .price {
+            color: #fff;
+        }
+
+        .product-thumb-ver-1 .percent {
+            color: #C3E40E;
+        }
+
+        .more {
+            border: 0.1rem solid #fff;
+            border-radius: 8rem;
+            font-size: 0.8rem;
+            line-height: 1rem;
+            font-weight: 700;
+            color: #fff;
+            position: absolute;
+            bottom: 19rem;
+            margin: 0 auto;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0.5rem 0.7rem;
+            z-index: 9;
+        }
+
+        .mockup-container {
+            position: relative;
+            /* overflow: hidden; */
+            height: auto;
+        }
+
+        .mockup-container .inner {
+            display: flex;
+        }
+
+        .con6 .mockup-container .inner:first-child {
+            padding: 14rem 21.5rem 0 24rem;
+        }
+
+        .mockup-container .inner>.row {
+            gap: 8rem;
+        }
+
+        .mockup-container .inner .text-container .content {
+            width: 50.5rem;
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+
+        .con6 .mockup-container .inner:nth-child(2) {
+            position: absolute;
+            right: 24rem;
+            top: 76.4rem;
+        }
+
+        .con6 .mockup-container .inner:nth-child(3) {
+            margin: 50rem 21.5rem 0;
+        }
+
+        .con6 .mockup-container .inner:nth-child(3) .content-body {
+            background: linear-gradient(180deg, #2E1020 0%, #391428 25%, #2E1020 100%);
+        }
+
+        .con6 .mockup-container .inner:nth-child(3) .mockup:last-child {
+            margin-top: 24rem;
+        }
+
+        .con6 .mockup-container .inner:nth-child(3) .mockup:first-child .content-body .img {
+            width: 27rem;
+            top: 13.3rem;
+            right: 0;
+            margin: 0 auto;
+        }
+
+        .con6 .mockup-container .inner:nth-child(3) .mockup:last-child .content-body .img {
+            top: 10.5rem;
+        }
+
+        .con6 .mockup-container .inner:nth-child(3) .text-container {
+            margin-top: 34.3rem;
+        }
+
+        .con6 .mockup-container .inner:last-child {
+            justify-content: flex-end;
+            gap: 8.5rem;
+            padding: 0 24rem 0 0;
+        }
+
+        .con6 .mockup-container .inner:last-child:not(.row-between) .margin-32 {
+            margin-top: 32rem;
+        }
+
+        .con6 .mockup-container .inner:last-child .mockup:last-child {
+            margin-top: 0.4rem;
+        }
+
+        .mockup .canvas {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            display: block;
+        }
+
+        .con7 .bg-container {
+            background-color: #080808;
+            position: relative;
+            height: 129rem;
+        }
+
+        .con7 .c-title,
+        .s-title {
+            text-align: center;
+            font-size: 1.7rem;
+            line-height: 1.9rem;
+            color: #fff;
+            font-weight: 600;
+            opacity: 1;
+            visibility: visible;
+            margin: 1.3rem 0 1rem;
+        }
+
+        .con7 .c-logo {
+            height: 0.8rem;
+        }
+
+        .con7 .mock {
+            width: 103rem;
+            margin: 12rem auto 0;
+            position: relative;
+            z-index: 9;
+            left: -1rem;
+        }
+
+        .con7 .bg-container .row {
+            gap: 3.2rem;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            width: max-content;
+        }
+
+        .con7 .box {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            width: max-content;
+        }
+
+        .con7 .box img:last-child {
+            position: absolute;
+        }
+
+        .con7 .row-g {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+        }
+
+        .con7 .row {
+            flex-wrap: nowrap;
+            margin-top: 13rem;
+        }
+
+        .con7 .row .img {
+            height: 46.2rem;
+        }
+
+        .con7 .row .img img {
+            height: 100%;
+            width: auto;
+        }
+
+        .con7 .row .img:last-child {
+            border-radius: 3.2rem;
+            overflow: hidden;
+        }
+
+        .con7 .img-g {
+            z-index: 1;
+            width: auto;
+            border-radius: 3.2rem 3.2rem 3.2rem 0;
+            width: 90.5rem;
+            height: 46rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .img-g .bg {
+            transform: translateX(0.03%);
+        }
+
+        .con7 .img-row {
+            position: relative;
+            overflow: hidden;
+            left:-0.15rem;
+            height: 58.3rem;
+            border-radius: 3.2rem 0 0 0;
+        }
+
+        .con7 .product-content {
+            width: max-content;
+            position: relative;
+            margin-left: 30.3rem;
+            gap: 1.2rem;
+        }
+
+        .con7 .content-container .content {
+            /* flex: 1; */
+            text-align: center;
+            position: relative;
+            margin-left: 5rem;
+        }
+
+        .con7 .one {
+            width: 22.5rem;
+            margin-top: 4rem;
+            position: absolute;
+            right: 5rem;
+            top: 0;
+        }
+
+        .con7 .product-content.grid-3 {
+            padding-top: 9.3rem !important;
+            top: 0;
+            position: relative;
+        }
+
+        .con7 .img-row .translate-x {
+            display: flex;
+            flex-direction: row;
+            gap: 3.2rem;
+            overflow: hidden;
+        }
+
+        .con7 .content-container {
+            flex: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin-bottom: 4rem;
+        }
+
+        .con7 .product-thumb-ver-1 {
+            opacity: 1;
+            visibility: visible;
+            display: flex;
+            transform: translateY(0);
+            flex-direction: column;
+            width: 9.7rem;
+        }
+
+        .con7 .product-thumb-ver-1 .row {
+            position: relative;
+            width: max-content;
+            gap: 0.2rem;
+            margin: 0.8rem auto 0;
+        }
+
+        .con7 .product-thumb-img::after {
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: -1;
+        }
+
+        .con7 .more {
+            bottom: 4rem;
+        }
+
+        .con7 .fixed {
+            height: 58.1rem;
+            width: 27.4rem;
+            position: absolute;
+            left: 0;
+            overflow: hidden;
+            z-index: 8;
+        }
+
+        .con7 .fixed::after {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 66.82%, rgba(0, 0, 0, 0.3) 100%);
+            content: '';
+            position: absolute;
+            bottom: 11.7rem;
+            left: 0;
+            height: 46rem;
+            z-index: 99;
+            width: 100%;
+        }
+
+        .con7 .fixed .content {
+            position: absolute;
+            z-index: 999;
+            bottom: 15.9rem;
+            left: 8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .con7 .fixed .bottom {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .con7 .fixed .img {
+            position: relative;
+            z-index: 0;
+            height: 79%;
+        }
+
+        .con7 .fixed .bg {
+            position: absolute;
+            z-index: 0;
+            left: 0;
+            width: 100%;
+            top: 0;
+            z-index: 9999;
+            height: 79%;
+        }
+
+        .con7 .product-thumb-img {
+            height: 14.7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .con7 .product-thumb-img:first-child img {
+            width: 8.4rem;
+        }
+
+        .con7 .product-thumb-img:nth-child(2) img {
+            width: 8.9rem;
+        }
+
+        .con7 .product-thumb-img:nth-child(3) img {
+            width: 8rem;
+        }
+
+        .group:not(.translate-x) {
+            transform: translateX(-4rem);
+        }
+
+        .con8 {
+            position: relative;
+            height: max-content;
+        }
+
+        .con8 .img {
+            padding-top: 8rem;
+            position: relative;
+            overflow: hidden;
+            height: max-content;
+        }
+
+        .con9 {
+            background-color: #060608;
+            padding: 1rem 13.7rem 32rem 14rem;
+            position: relative;
+        }
+
+        .con9 .row {
+            gap: 14.2rem;
+        }
+
+        .phone {
+            width: 45.2rem;
+        }
+
+        .con9 .text {
+            color: #fff;
+            line-height: 3.2rem;
+            font-size: 2rem;
+            font-weight: 400;
+            text-wrap: nowrap;
+            margin-top: 71.7rem;
+        }
+
+        .con9 .row:last-child:not(.fadein-group) {
+            gap: 14.4rem;
+            margin-top: 16rem;
+        }
+
+        .con9 .row:last-child .phone:last-child {
+            margin-left: 0.1rem;
+        }
+
+        .con10 {
+            background-color: #060608;
+            padding-top: 1rem;
+            padding-bottom: 24rem;
+        }
+
+        .con10 .badge .text {
+            height: 4.5rem;
+            display: block;
+            flex: 1;
+            opacity: 0;
+            visibility: hidden;
+            padding: 0 3rem 0 7.4rem;
+            /* position: absolute; */
+        }
+
+        .con10 .badge .text.show {
+            display: block;
+        }
+
+        .con10 .badge span img {
+            height: 100%;
+            width: auto;
+        }
+
+        .badge {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            gap: 0.4rem;
+            justify-content: center;
+            height: 8.8rem;
+            overflow: hidden;
+            /* border:1px solid red; */
+            max-width: max-content;
+            flex-wrap: nowrap;
+            position: relative;
+        }
+
+        .badge .bg {
+            border: 0.5rem solid #fff;
+            border-radius: 10rem;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 9rem;
+        }
+
+        .badge .ico {
+            width: 4.8rem;
+            height: 4.8rem;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            left: 2.2rem;
+        }
+
+        .con10 .badge:first-child {
+            margin-left: 26rem;
+        }
+
+        .con10 .badge:nth-child(2) {
+            margin-top: 4rem;
+            margin-left: 14rem;
+            margin-bottom: 13.3rem;
+        }
+
+        .con10 .oneb {
+            margin-top: 8rem;
+            margin-left: 35rem;
+        }
+
+        .con10 .badge-container+.badge .text {
+            margin-left: 7.8rem;
+        }
+
+        .con11 .col {
+            margin: 0 auto;
+            width: max-content;
+            gap: 6.6rem;
+        }
+
+        .con11 .col+.mockup-container {
+            margin-top: 12.4rem;
+            margin-left: 24rem;
+        }
+
+        .con11 .fadein-2 {
+            margin: 0 auto;
+            width: max-content;
+        }
+
+        .screen {
+            border: 0.6rem solid #2E1020;
+            border-radius: 4rem;
+            display: block;
+            position: relative;
+            overflow: hidden;
+            width: 143.3rem;
+        }
+
+        .screen::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #2E1020;
+            inset: 0;
+            margin: auto;
+        }
+
+        .screen img {
+            position: relative;
+            z-index: 1;
+        }
+
+        .con11 .mockup-container .inner {
+            gap: 8rem;
+        }
+
+        .con11 .mockup-container .inner .fadein:first-child .mockup {
+            margin: 0;
+        }
+
+        .con11 .mockup-container .text-container {
+            padding: 0;
+            margin-left: 16rem;
+        }
+
+        .con11 .inner:last-child {
+            justify-content: flex-start;
+            /* padding: 0 21.5rem 0 24rem; */
+            gap: 8rem;
+            margin-top: 40rem;
+        }
+
+        .con11 .inner:last-child .fadein-2 {
+            position: absolute;
+            top: 63.4rem;
+            right: 24rem;
+        }
+
+        .con11 .mockup-container+.screen:last-child {
+            margin: 0 auto 0;
+        }
+
+        .con11 .mockup-container {
+            margin-bottom: 0rem;
+        }
+
+        .con12 .bg-container {
+            background: linear-gradient(199.72deg, #13040C 2.7%, #391428 101.42%);
+        }
+
+        .con12 .text-container:first-child {
+            gap: 4.3rem;
+        }
+
+        .con12 .text-container.item:not(:first-child) {
+            padding: 0;
+        }
+
+        .con12 .fadein-2+.text-container {
+            padding: 0;
+        }
+
+        .con12 .bg-container .img {
+            width: 39.4rem;
+            margin: 11rem auto;
+        }
+
+        .con12 .mockup-container .inner:first-child {
+            margin-top: 14rem;
+            padding: 0 24rem;
+            gap: 8rem;
+            position: relative;
+        }
+
+        .con12 .mockup-container .inner:first-child .text-container {
+            margin-left: 16rem;
+        }
+
+        .con12 .fadein-2 {
+            display: flex;
+            gap: 8rem;
+        }
+
+        .con12 .text-container+.fadein-2 {
+            position: absolute;
+            top: 47.4rem;
+            right: 24rem;
+        }
+
+
+        .con12 .mockup-container .inner .mockup:first-child {
+            margin: 0;
+        }
+
+        .con12 .inner-row {
+            display: flex;
+            flex-direction: row;
+            padding: 36rem 24rem 0;
+            justify-content: space-between;
+        }
+
+        .con12 .inner-row>.mockup:first-child {
+            margin-top: 26rem;
+        }
+
+        .con12 .inner-row .row {
+            gap: 8rem;
+        }
+
+        .con12 .inner-row .fadein-2 {
+            margin-top: 26rem;
+        }
+
+        .con13 .bg-container {
+            display: flex;
+            background: linear-gradient(180deg, #13040C -4.57%, #391428 90.36%);
+            align-items: center;
+        }
+
+
+        .con13 .text-container:first-child {
+            gap: 4.3rem;
+        }
+
+        .con13 .bg-container .img {
+            margin: auto;
+            width: 167.2rem;
+        }
+
+        .con14 .row-between .text-container {
+            padding-top: 13rem;
+        }
+
+        .con14 .row-between+.row {
+            margin-top: 19.6rem;
+            margin-left: 96rem;
+        }
+
+        .con14 .col {
+            margin: 0 auto 0;
+            width: max-content;
+        }
+
+        .con14 .col .fadein {
+            padding-top: 6rem;
+        }
+
+        .con14 .col .fadein-2:first-child {
+            padding-top: 14rem;
+            /* padding: 0; */
+        }
+
+        .con14 .inner.row-between {
+            position: relative;
+        }
+
+        .con14 .text-container {
+            right: 24rem;
+            top: 0;
+            padding: 0;
+            position: absolute;
+        }
+
+        .con14 .row-between .mockup:last-child {
+            /* position: absolute;
+            top: 56.9rem;
+            right: 24.5rem; */
+        }
+
+        .con14 .text-container+.absolute {
+            position: absolute;
+            top: 56.9rem;
+            right: 24.5rem;
+        }
+
+        .row-between {
+            margin-top: 14rem;
+            padding: 0 24rem !important;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between !important;
+        }
+
+        .con15 .bg-container {
+            background-color: #060608;
+            padding: 21rem 23.8rem;
+            margin-top: 2.4rem;
+            height: 110rem;
+        }
+
+        .con15 .grid-5 {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 4rem;
+        }
+
+        .con15 .grid-5 .item {
+            position: relative;
+        }
+
+        .con15 .circle img {
+            width: 4.6rem;
+        }
+
+        .con15 .item>.row {
+            gap: 2rem;
+        }
+
+        .con15 .text-container:first-child {
+            gap: 4.3rem;
+        }
+
+        .con15 .circle-img {
+            position: relative;
+        }
+
+        .con15 .circle-img .txt {
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            color: #fff;
+            width: max-content;
+            height: max-content;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.2rem;
+            font-size: 1rem;
+        }
+
+        .con15 .circle {
+            width: 8.4rem;
+            min-width: 8.4rem;
+            height: 8.4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .con15 .circle .txt {
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            width: max-content;
+            height: max-content;
+        }
+
+        .con15 .circle-bg {
+            border-radius: 50%;
+            background-color: #CDEB2D;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .con15 .box {
+            margin-top: 2rem;
+            color: #fff;
+            font-weight: 600;
+            line-height: 1.2rem;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        .con15 .box .title {
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            width: max-content;
+            height: max-content;
+            text-align: center;
+            color: #fff;
+            letter-spacing: 0;
+        }
+
+        .con15 .box span {
+            font-weight: 500;
+            font-size: 1.8rem;
+            line-height: 1.7rem;
+            color: inherit;
+            letter-spacing: -0.02em;
+            margin-top: 0.3rem;
+            display: block;
+        }
+
+        .con15 .banner {
+            position: relative;
+            margin-top: 2.6rem;
+        }
+
+        .con15 .ico {
+            position: absolute;
+            width: 2.6rem;
+            top: 0.7rem;
+            right: 7rem;
+            z-index: 99;
+        }
+
+        .con15 .ico2 {
+            position: absolute;
+            width: 2.2rem;
+            bottom: 2.6rem;
+            right: 1.3rem;
+            z-index: 2;
+        }
+
+        .con15 .banner::after {
+            background-color: #202020;
+            bottom: 0;
+            z-index: 0;
+            position: absolute;
+            left: 0;
+            content: '';
+            width: 100%;
+            border-radius: 1rem;
+            overflow: hidden;
+            height: calc(100% - 1.5rem);
+        }
+
+        .con15 .banner img {
+            position: relative;
+            z-index: 1;
+        }
+
+        .con15 .input {
+            display: flex;
+            position: relative;
+            background-color: #202020;
+            border-radius: 1rem;
+            overflow: hidden;
+            color: #a0a0a0;
+            line-height: 1.3rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: -0.003em;
+            justify-content: space-between;
+            padding: 1.3rem;
+            margin-bottom: 1.3rem;
+        }
+
+        .con15 .line {
+            position: absolute;
+            width: 0.1rem;
+            height: 1.3rem;
+            top: 50%;
+            left: 1.2rem;
+            transform: translateY(-50%);
+            background-color: #CDEB2D;
+            border-radius: 6.6rem;
+        }
+
+        .con15 .input span {
+            color: inherit;
+        }
+
+        .con15 .input img {
+            width: 1.3rem;
+        }
+
+        .con15 .radius-1 {
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .con15 .item:nth-child(2) .col {
+            margin-top: 2.6rem;
+        }
+
+        .con15 .comp {
+            background-color: #5C5A46;
+            border-radius: 1rem;
+            overflow: hidden;
+            padding: 2.4rem 1.4rem 2.9rem 1.2rem;
+            margin-top: 4rem;
+            position: relative;
+        }
+
+        .con15 .comp .row {
+            justify-content: space-between;
+            color: #fff;
+
+        }
+
+        .con15 .comp .row>.img {
+            width: 2.9rem;
+        }
+
+        .con15 .comp .row span {
+            text-align: right;
+            font-size: 0.66rem;
+            line-height: 0.8rem;
+            font-weight: 700;
+            color: inherit;
+        }
+
+        .con15 .comp .bg {
+            border-radius: 1rem;
+            width: 15.8rem;
+            overflow: hidden;
+            margin-top: 5rem;
+            margin-left: auto;
+            margin-right: 1.6rem;
+        }
+
+
+        .con15 .comp .bg2 {
+            position: absolute;
+            width: 12.9rem;
+            overflow: hidden;
+            top: 7.4rem;
+            right: 1.4rem;
+            border-radius: 2rem;
+            transform-origin: top right;
+        }
+
+        .con15 .poster {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            margin-bottom: 2.6rem;
+        }
+
+        .con15 .poster::after {
+            content: '';
+            background-color: rgba(0, 0, 0, 0.04);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .con15 .poster .main {
+            position: absolute;
+            margin: auto;
+            inset: 0;
+            width: 18rem;
+            border-radius: 1rem;
+            overflow: hidden;
+            height: max-content;
+        }
+
+        .con15 .poster .content {
+            position: absolute;
+            margin: auto;
+            inset: 0;
+            color: #fff;
+            height: 26.6rem;
+            width: 16rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .con15 .poster .content span {
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: -0.03em;
+            text-align: center;
+        }
+
+        .con15 .poster .content .ko {
+            font-size: 0.9rem;
+            line-height: 1.3rem;
+            font-weight: 400;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .con15 .poster .content .sub,
+        .poster .content .title {
+            gap: 0.4rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .con15 .poster .content .sub {
+            margin-bottom: 0.4rem;
+        }
+
+        .poster .content .title {
+            margin-top: 0.2rem;
+        }
+
+        .con15 .poster .content .img {
+            height: 2rem;
+            margin: 0 auto;
+            width: max-content;
+        }
+
+        .con15 .poster .content .img img {
+            height: 100%;
+            width: auto;
+        }
+
+        .con15 .group {
+            margin-top: 8.2rem;
+            position: relative;
+            transform: translateX(0)
+        }
+
+        .con15 .group .bg {
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .con15 .group .title {
+            position: absolute;
+            width: 13.2rem;
+            bottom: 2.7rem;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            margin: 0 auto;
+        }
+
+        .con15 .group .img {
+            position: absolute;
+            width: 30.7rem;
+            bottom: 4rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .con15 .bar {
+            margin-top: 1.9rem;
+        }
+
+        .con16 .bg-container:not(.color) {
+            background-color: #EAEAEA;
+            height: 112rem;
+            margin-top: 2.4rem;
+            padding: 16.3rem 21.1rem;
+        }
+
+        .con16 .color {
+            height: 110rem;
+            display: grid;
+            margin: 2.4rem auto;
+            grid-template-rows: 46rem 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        .con16 .item {
+            position: relative;
+        }
+
+        .con16 .item-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: #1F1F1F;
+        }
+
+        .con16 .text-container:first-child {
+            gap: 4.3rem;
+        }
+
+        .con16 .color .item {
+            height: 100%;
+            width: 100%;
+        }
+
+        .con16 .text {
+            margin-left: 117.6rem;
+            font-size: 2rem;
+            display: grid;
+            grid-template-columns: 14.1rem auto;
+            font-weight: 400;
+            line-height: 3rem;
+            color: inherit;
+            letter-spacing: -0.05em;
+            position: relative;
+            /* z-index: 1; */
+        }
+
+        .con16 .text span {
+            color: inherit;
+        }
+
+        .con16 .color .item:not(:first-child) {
+            align-items: center;
+            display: flex;
+        }
+
+        .con16 .color .item:first-child {
+            background-color: #391428;
+            height: 100%;
+            width: 100%;
+            color: #fff !important;
+            padding-top: 8rem;
+        }
+
+        .con16 .color .item:nth-child(2) {
+            background-color: #C3E40E;
+            color: #1f1f1f;
+        }
+
+        .con16 .color .item:nth-child(3) {
+            background-color: #1F1F1F;
+            color: #fff;
+        }
+
+        .con16 .color .item:nth-child(4) {
+            background-color: #888888;
+            color: #fff;
+        }
+
+        .con16 .color .item:nth-child(5) {
+            background-color: #A0A0A0;
+            color: #fff;
+        }
+
+        .con16 .color .item:nth-child(6) {
+            background-color: #CCCCCC;
+            color: #fff;
+        }
+
+        .con16 .color .item:nth-child(7) {
+            background-color: #E1E1E1;
+            color: #fff;
+        }
+
+        .con16 .color .item:nth-child(8) {
+            background-color: #f5f5f5;
+            color: #a0a0a0;
+        }
+
+        .con16 .color .item:nth-child(9) {
+            color: #888888;
+            background-color: #fafafa;
+        }
+
+        .con17 .bg-container {
+            height: auto;
+            opacity: 0;
+            visibility: visible;
+        }
+
+        .con17 .bg-container img {
+            vertical-align: bottom;
+        }
+
+        .con17 .footer {
+            font-size: 2.8rem;
+            line-height: 3.8rem;
+            letter-spacing: -0.025em;
+            font-weight: 400;
+            display: flex;
+            flex-direction: column;
+            gap: 3.8rem;
+        }
+
+        .under {
+            position: relative;
+        }
+
+        .footer {
+            padding: 12.4rem 14rem;
+        }
+
+        .under::after {
+            position: absolute;
+            width: 100%;
+            height: 0.2rem;
+            bottom: 0.1rem;
+            left: 0;
+            background-color: #391428;
+            content: '';
+        }
+
+        .ye {
+            z-index: 99;
+        }
+
+        .bg-bg {
+            position: relative;
+            background: url('https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_bg_09.png') center/cover no-repeat;
+            width: 100%;
+            height: 100%;
+            top: 0.2rem;
+            z-index: 9;
+        }
+
+        .bg-bg {
+            position: relative;
+            background: url('https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_bg_09_222.png') center/cover no-repeat;
+            height: 100%;
+            margin: 0 auto;
+            z-index: 9;
+            width: 27rem;
+            height: 27rem;
+        }
+
+
+        .mask-layer {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background: #2E1020;
+            mask: url(#circleMask);
+            -webkit-mask: url(#circleMask);
+            mask-repeat: no-repeat;
+            mask-size: cover;
+            pointer-events: none;
+            z-index: 22;
+        }
+
+        .c1 {
+            transform: translateY(16rem) translateX(12rem);
+        }
+
+        .c2 {
+            transform: translateY(11rem) translateX(19rem);
+        }
+
+        .mask-layer circle {
+            transform: scale(1.2);
+        }
+
+        .fadein {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(18%);
+        }
+
+        .fadein.only {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .fadein.big {
+            transform: translateY(30%);
+        }
+
+        /* .op {
+            opacity: 0;
+            visibility: hidden;
+        } */
+
+        .fadein-group .item {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(15%);
+        }
+
+        .op-group .item {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .up {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+        }
+
+        .scale {
+            transform: scale(0.9);
+            transform-origin: center;
+        }
+
+        #fb-root {
+            display: none;
+        }
+
+
+        :root {
+            --power1in: cubic-bezier(0.11, 0, 0.5, 0);
+            --power1out: cubic-bezier(0.5, 1, 0.89, 1);
+            --power1inOut: cubic-bezier(0.45, 0, 0.55, 1);
+            --power2in: cubic-bezier(0.32, 0, 0.67, 0);
+            --power2out: cubic-bezier(0.33, 1, 0.68, 1);
+            --power2inOut: cubic-bezier(0.65, 0, 0.35, 1);
+            --power3in: cubic-bezier(0.5, 0, 0.75, 0);
+            --power3out: cubic-bezier(0.25, 1, 0.5, 1);
+            --power3inOut: cubic-bezier(0.76, 0, 0.24, 1);
+            --power4in: cubic-bezier(0.64, 0, 0.78, 0);
+            --power4out: cubic-bezier(0.22, 1, 0.36, 1);
+            --power4inOut: cubic-bezier(0.83, 0, 0.17, 1);
+
+            --playDelay: 0.3s;
+            --commonDelay: calc(var(--playDelay) + 0.2s);
+        }
+
+        .con1 .text-img-container .t-1 {
+            transition: flex 0.9s var(--power1inOut) var(--playDelay);
+        }
+
+        .con1.enter .text-img-container .t-1 {
+            flex: 1;
+        }
+
+        .con1 .img-container .img {
+            transition: transform 0.7s var(--power1inOut) var(--commonDelay);
+        }
+
+        .con1.enter .img-container .img {
+            transform: scale(1) translateY(0%);
+        }
+
+        .text-container .content {
+            transition: opacity 0.75s var(--power1inOut);
+        }
+
+        .text-container .content.enter {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mySwiper.enter .swiper-slide .bg {
+            transition: opacity 0.85s var(--power2out);
+            transition-delay: 0.2s;
+        }
+
+        .mySwiper.enter .swiper-slide .bg {
+            opacity: 0;
+        }
+
+        .mySwiper.x .swiper-slide .img img {
+            transform: scale(1.2) translateX(4%);
+            transition: transform 1.1s var(--power3out);
+        }
+
+        .mySwiper.x.enter .swiper-slide .img img {
+            transform: scale(1) translateX(0%);
+        }
+
+        .mySwiper.x.enter .swiper-slide:nth-child(2) .img img {
+            transition-delay: 0.08s;
+        }
+
+        .mySwiper.x.enter .swiper-slide:nth-child(3) .img img {
+            transition-delay: 0.16s;
+        }
+
+        .mySwiper.x.enter .swiper-slide:nth-child(4) .img img {
+            transition-delay: 0.24s;
+        }
+
+        .mySwiper.x.enter .swiper-slide:nth-child(5) .img img {
+            transition-delay: 0.32s;
+        }
+
+        .mySwiper .swiper-slide:nth-child(2) .bg {
+            transition-delay: 0.15s;
+        }
+
+        .mySwiper .swiper-slide:nth-child(3) .bg {
+            transition-delay: 0.3s;
+        }
+
+        .mySwiper .swiper-slide:nth-child(4) .bg {
+            transition-delay: 0.45s;
+        }
+
+        .mySwiper .swiper-slide:nth-child(5) .bg {
+            transition-delay: 0.6s;
+        }
+
+        .mySwiper .swiper-slide {
+            transition: opacity 0.85s var(--power2out);
+        }
+
+        .mySwiper.y .swiper-slide {
+            transition: transform 0.8s var(--power3out), opacity 0.6s var(--power1inOut);
+            visibility: visible;
+        }
+
+        .mySwiper.y.enter .swiper-slide {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .mySwiper.y .swiper-slide:nth-child(2) {
+            transition-delay: 0.1s;
+        }
+
+        .mySwiper.y .swiper-slide:nth-child(3) {
+            transition-delay: 0.2s;
+        }
+
+        .mySwiper.y .swiper-slide:nth-child(4) {
+            transition-delay: 0.3s;
+        }
+
+        .mockup-container .inner.enter .content-body .c-title {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mockup-container .inner .content-body .c-sub {
+            transition: opacity 0.6s var(--power1out);
+            transition-delay: 0.7s;
+        }
+
+        .mockup-container .inner.enter .content-body .c-sub {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .product-thumb-ver-1 {
+            transition: transform 0.8s var(--power2out), opacity 0.8s var(--power1out);
+            transition-delay: 0.2s;
+        }
+
+        .enter .product-thumb-ver-1 {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .enter .product-thumb-ver-1:nth-child(2) {
+            transition-delay: 0.27s;
+        }
+
+        .enter .product-thumb-ver-1:nth-child(3) {
+            transition-delay: 0.34s;
+        }
+
+        /* .inner .content {
+            transition: transform 0.6s var(--power2out) 0.25s, opacity 0.6s var(--power1out) 0.25s;
+            transform: translateX(15%);
+        }
+
+        .inner.enter .content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0px);
+        } */
+
+        .fadein {
+            transition:
+                opacity 0.65s var(--power1inOut),
+                transform 0.65s var(--power2out);
+        }
+
+        .fadein.enter {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fadein-2 .item-2.screen {
+            transform: translateY(8%);
+        }
+
+
+        .fadein-2.enter .item-2 {
+            opacity: 1;
+            transform: translateY(0) !important;
+        }
+
+        .fadein-2 .item-2 {
+            opacity: 0;
+            transform: translateY(15%);
+            transition:
+                opacity 0.65s var(--power1inOut),
+                transform 0.65s var(--power2out);
+        }
+
+        .mockup-container .inner .fadein:nth-child(2) {
+            transition-delay: 0.08s;
+        }
+
+        .con7 .img-g .bg {
+            transform: scale(1.01);
+        }
+
+        .con7 .enter .img-g .bg {
+            transform: translateX(0);
+        }
+
+        .con7 .fixed .img {
+            will-change: transform;
+            transition-delay: 0.04s;
+            transition: transform 1.25s cubic-bezier(0.69, -0.65, 0.255, 1.4);
+        }
+
+        .con7 .enter .fixed .img {
+            transform: translateX(0);
+        }
+
+        .con7 .up {
+            transition: opacity 0.5s var(--power1out), transform 0.8s var(--power2out);
+            transition-delay: 0.1s;
+        }
+
+        .con7 .enter .up {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .con7 .c-sub {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .con7 .enter .c-sub {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .con7 .one {
+            transition: transform 1.2s var(--power3out);
+            transition-delay: 0.04s;
+        }
+
+        .con7 .enter .one {
+            transform: translateX(0);
+        }
+
+        .product-content.grid-3 .product-thumb-ver-1 {
+            transition: transform 0.5s var(--power2out) 0.1s, opacity 0.8s var(--power1inOut) 0.2s;
+            transition-delay: 0.2s;
+        }
+
+        .product-content.grid-3 .product-thumb-ver-1:nth-child(2) {
+            transition-delay: 0.27s;
+        }
+
+        .product-content.grid-3 .product-thumb-ver-1:nth-child(3) {
+            transition-delay: 0.34s;
+        }
+
+        .enter .product-content.grid-3 .product-thumb-ver-1 {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .fadein-group .item {
+            transition: opacity 0.65s var(--power1inOut), transform 0.6s var(--power2out);
+        }
+
+        .fadein-group.enter .item {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fadein-group .item:nth-child(2) {
+            transition-delay: 0.1s;
+        }
+
+        .oneb .bg {
+            transition: width 0.7s var(--power2inOut);
+        }
+
+        .oneb .text {
+            transition: opacity 0.8s var(--power1inOut);
+            transition-delay: 0.2s;
+        }
+
+        .enter.oneb .bg {
+            width: 100%;
+        }
+
+        .enter.oneb .text {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .col:has(.badge) .badge .bg {
+            transition: width 0.7s var(--power2inOut);
+            transition-delay: 0.15s;
+        }
+
+        .col:has(.badge).enter .badge .bg {
+            width: 100%;
+        }
+
+        .col:has(.badge) .badge:nth-child(2) .bg {
+            transition-delay: 0.3s;
+        }
+
+        .col:has(.badge) .badge .text {
+            transition: opacity 0.8s var(--power1inOut);
+            transition-delay: 0.2s;
+        }
+
+        .col:has(.badge).enter .badge .text {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .col:has(.badge) .badge:nth-child(2) .text {
+            transition-delay: 0.35s;
+        }
+
+        .scale {
+            transition: transform 0.7s var(--power3out);
+        }
+
+        .scale.enter {
+            transform: scale(1);
+        }
+
+        .fadeinup {
+            padding-top: 14rem;
+            transition: opacity 0.5s var(--power1inOut), transform 0.65s var(--power2out);
+        }
+
+        .enter.fadeinup {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .grid-5 .group .img {
+            transition: transform 0.65s var(--power1inOut);
+            transition-delay: 0.2s;
+        }
+
+        .grid-5.enter .group .img {
+            transform: translateX(-50%) scale(1);
+        }
+
+        .grid-5 .circle-scale {
+            transition: transform 0.8s var(--power2out);
+            transition-delay: 0.1s;
+        }
+
+        .grid-5.enter .circle-scale {
+            transform: scale(1);
+        }
+
+        .grid-5 .ani.circle-scale {
+            transition-delay: 0.19s;
+        }
+
+        .grid-5 .circle-scale.box {
+            transition-delay: 0.28s;
+        }
+
+        .grid-5 .txt {
+            transition: opacity 0.8s var(--power2out);
+            transition-delay: 0.15s;
+        }
+
+        .grid-5.enter .txt {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .grid-5 .ani.circle-scale+.txt {
+            transition-delay: 0.35s;
+        }
+
+        .grid-5 .circle-scale.box+.txt {
+            transition-delay: 0.5s;
+        }
+
+        .comp .bg2 {
+            transition: clip-path 0.8s var(--power2out);
+            transition-delay: 0.25s;
+        }
+
+        .enter .comp .bg2 {
+            clip-path: inset(0% 0%);
+        }
+
+        .poster .main {
+            transition: transform 0.8s var(--power2out);
+            transition-delay: 0.23s;
+        }
+
+        .enter .poster .main {
+            transform: scale(1);
+        }
+
+        .bg-container .op {
+            opacity: 0;
+            transition: opacity 0.5s var(--power1inOut);
+        }
+
+        .bg-container .op.enter {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .text-container.op .content {
+            transition:opacity 0.6s var(--power1out);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .fadein-group+.row .text.op {
+            transition: opacity 0.7s var(--power1out);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .fadein-group+.row .text.op.enter {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .text-container.op .content.enter {
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .item-bg {
+            transition: opacity 0.7s var(--power1out);
+            transition-delay: 0.08s;
+        }
+
+        .item:nth-child(8) .item-bg {
+            transition-delay: 0.16s;
+        }
+
+
+        .item:nth-child(7) .item-bg {
+            transition-delay: 0.24s;
+        }
+
+        .item:nth-child(6) .item-bg {
+            transition-delay: 0.32s;
+        }
+
+        .item:nth-child(5) .item-bg {
+            transition-delay: 0.4s;
+        }
+
+        .item:nth-child(4) .item-bg {
+            transition-delay: 0.48s;
+        }
+
+        .enter .item-bg {
+            opacity: 0;
+        }
+
+        .con17 .fadeinup {
+            padding: 0;
+            transform: translateY(0);
+        }
+
+        .con17 .bg-container {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+    <!-- <link type="text/css" rel="stylesheet" href="./style.css"> -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-47162325-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- // pc와 동일 -->
+    <link rel="shortcut icon" href="../img/favicon.ico">
+</head>
+
+<body data-loading="true">
+    <!-- pr페이지 하단 페이스북 좋아요 버튼 스크립트 및 ui (버튼을 실제로 클릭하는 사용자가 미비하나 원래 있던거라 안건드림) -->
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    <div class="dim">
+        <div class="loading">
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M14.5 8C14.5 8.85359 14.3319 9.69883 14.0052 10.4874C13.6786 11.2761 13.1998 11.9926 12.5962 12.5962C11.9926 13.1998 11.2761 13.6786 10.4874 14.0052C9.69883 14.3319 8.85359 14.5 8 14.5C7.14641 14.5 6.30117 14.3319 5.51256 14.0052C4.72394 13.6786 4.00739 13.1998 3.40381 12.5962C2.80022 11.9926 2.32144 11.2761 1.99478 10.4874C1.66813 9.69883 1.5 8.85359 1.5 8C1.5 7.14641 1.66813 6.30117 1.99478 5.51256C2.32144 4.72394 2.80023 4.00739 3.40381 3.40381C4.00739 2.80022 4.72394 2.32144 5.51256 1.99478C6.30117 1.66813 7.14641 1.5 8 1.5C8.85359 1.5 9.69883 1.66813 10.4874 1.99478C11.2761 2.32144 11.9926 2.80023 12.5962 3.40381C13.1998 4.00739 13.6786 4.72394 14.0052 5.51256C14.3319 6.30118 14.5 7.14641 14.5 8L14.5 8Z"
+                    stroke="white" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round" />
+                <path
+                    d="M8 1.5C8.85359 1.5 9.69883 1.66813 10.4874 1.99478C11.2761 2.32144 11.9926 2.80023 12.5962 3.40381C13.1998 4.00739 13.6786 4.72394 14.0052 5.51256C14.3319 6.30117 14.5 7.14641 14.5 8"
+                    stroke="white" stroke-width="3" stroke-linecap="round" />
+            </svg>
+
+        </div>
+    </div>
+    <div class="portfolio">
+        <div class="km">
+            <div class="con1">
+                <div class="text-img-container">
+                    <div class="row">
+                        <span class="txt-img t-2"><img
+                                src="https://storage.plus-ex.com/pr/img/experience/detail/km/01_text_01.png"
+                                alt /></span>
+                        <span class="txt-img t-1"><img
+                                src="https://storage.plus-ex.com/pr/img/experience/detail/km/01_text_02.png"
+                                alt /></span>
+                        <span class="txt-img t-3"><img
+                                src="https://storage.plus-ex.com/pr/img/experience/detail/km/01_text_03.png"
+                                alt /></span>
+                    </div>
+                    <div class="row">
+                        <span class="txt-img"><img
+                                src="https://storage.plus-ex.com/pr/img/experience/detail/km/01_text_04.png"
+                                alt /></span>
+                        <span class="txt-img t-1"><img
+                                src="https://storage.plus-ex.com/pr/img/experience/detail/km/01_text_05.png"
+                                alt /></span>
+                        <span class="txt-img"></span>
+                    </div>
+                </div>
+                <div class="img-container">
+                    <div class="img"><img src="https://storage.plus-ex.com/pr/img/experience/detail/km/01_mockup_01.png"
+                            alt /></div>
+                    <div class="img"><img src="https://storage.plus-ex.com/pr/img/experience/detail/km/01_mockup_02.png"
+                            alt /></div>
+                </div>
+            </div>
+            <div class="con2">
+                <div class="text-container op-group">
+                    <div class="title">KOLON MALL Mobile APP & Web renewal</div>
+                    <div class="content item">
+                        KolonMall은 국내 대표 패션 기업 코오롱FnC의 공식 온라인 쇼핑몰로 출발하여, 의류·뷰티·리빙 등<br />
+                        다양한 카테고리의 국내외 브랜드를 입점시키며 라이프스타일 커머스 플랫폼으로 확장해왔습니다.<br />
+                        그러나 소비자들은 여전히 KolonMall을 ‘코오롱 전용 플랫폼’으로 인식하고 있어, 브랜드 큐레이션과<br />
+                        감성적 소비가 중요한 시장에서 경쟁력 확보에 한계가 있었습니다. 이에 플러스엑스는 KolonMall이<br />
+                        ‘코오롱스포츠’ 중심 이미지를 탈피하고, 편집형 커머스 플랫폼으로의 독립성과 확장성을 갖출 수 있도록<br />
+                        새로운 BX 전략을 수립했습니다. 이를 기반으로 UX/UI 전반을 고도화해 단순한 쇼핑을 넘어<br />
+                        라이프스타일 허브로 자리잡는 것을 목표로 했습니다.
+                    </div>
+                </div>
+                <div class="bg-container">
+                    <div class="box">
+                        <div class="row">
+                            <span>VARIOUS CATEGORIES</span>
+                            <div class="ico-row">
+                                <span class="line"></span>
+                                <span class="ico">
+                                    <svg viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M-40 5H-41V7H-40V5ZM10 6L0 0.226497V11.7735L10 6ZM-40 6V7H1V6V5H-40V6Z"
+                                            fill="#391428" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <span>A DISCERNING EYE</span>
+                        </div>
+                        <div class="img-container">
+                            <div class="row">
+                                <div class="img"><img
+                                        src="https://storage.plus-ex.com/pr/img/experience/detail/km/02_img_01.png" />
+                                </div>
+                                <div class="img"><img
+                                        src="https://storage.plus-ex.com/pr/img/experience/detail/km/02_img_02.png" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="img"><img
+                                        src="https://storage.plus-ex.com/pr/img/experience/detail/km/02_img_03.png" />
+                                </div>
+                                <div class="img"><img
+                                        src="https://storage.plus-ex.com/pr/img/experience/detail/km/02_img_04.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <div class="row"><span class="num">1</span><span>Low utility of the search process.</span>
+                            </div>
+                            <div class="row"><span class="num">2</span><span>Lack of connection between content and
+                                    product.</span></div>
+                            <div class="row"><span class="num">3</span><span>Recommendation experiences lacking
+                                    context.</span></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="front">
+                            <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/02_img_06.png" alt />
+                        </div>
+                        <div class="back">
+                            <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/02_img_05.png" alt />
+                        </div>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/video1.jpg" alt />
+                    <video width="100%" preload="" height muted playsinline loop>
+                        <source
+                            src="https://player.vimeo.com/progressive_redirect/playback/1075194335/rendition/1080p/file.mp4?loc=external&signature=aca4709f655710b3c67ef459d3a21557b3a9cf58716a723a913a2ca8157c2f8d"
+                            type="video/mp4">
+                    </video>
+                    <div class="text-container op-group">
+                        <div class="title">Background</div>
+                        <div class="content item">
+                            KolonMall은 다양한 브랜드와 콘텐츠를 보유하고 있음에도,
+                            사용자에게는 코오롱 단독 브랜드 몰로 인식되어 통합 커머스
+                            플랫폼으로서의 역할이 제대로 전달되지 않았습니다. 브랜드
+                            스토리텔링, 큐레이션, 커머스 간의 연결성 또한 부족해, 탐색과 구매 사이의 몰입감 있는 여정이 형성되지 못했습니다. 특히
+                            매거진, 이벤트, 신상품 등 강력한 콘텐츠 자산이 쇼핑 경험과
+                            효과적으로 연결되지 못하는 구조적 한계가 존재했습니다.
+                        </div>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/video2.jpg" alt />
+                    <video width="100%" preload="" height muted playsinline loop>
+                        <source
+                            src="https://player.vimeo.com/progressive_redirect/playback/1075196227/rendition/720p/file.mp4?loc=external&signature=bc622630996f908a51643bddb6105b8e9e438a062570cea340f3fdba4daf5335"
+                            type="video/mp4">
+                    </video>
+                    <div class="text-container op-group">
+                        <div class="title">Project Goal</div>
+                        <div class="content item">
+                            브랜드 아이덴티티를 반영한 UX/UI 설계를 통해 콘텐츠, 상품, 추천이 유기적으로 연결되는 몰입형 커머스 플랫폼을 구축하는 것이 핵심 목표입니다. 사용자가 자신의
+                            취향을 발견하고, 콘텐츠에서 상품까지 자연스럽게 이어지는 여정을 경험할 수 있도록 하여, 단순 탐색을 넘어 감각적이고 경험 중심의 쇼핑 서비스로 전환하고자 했습니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="con3">
+                <div class="img">
+                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/03_img_01.jpg" />
+                </div>
+            </div>
+            <div class="con4">
+                <div class="text-container op-group">
+                    <div class="title">Data Driven Strategy</div>
+                    <div class="content item">
+                        Google Analytics 데이터를 기반으로 AARRR 프레임워크를 적용해 서비스 성과를 진단했습니다.<br />
+                        Acquisition부터 Referral까지 각 단계별 분석을 통해 주요 이탈 지점을 파악하고,<br />
+                        이를 바탕으로 사용자 여정의 문제를 발견하며 데이터 기반의 개선 방향을 도출했습니다.
+                    </div>
+                </div>
+                <div class="mySwiper x">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="bg"></div>
+                            <div class="col">
+                                <div class="img"><img
+                                        src="https://storage.plus-ex.com/pr/img/experience/detail/km/04_img_bg_01.jpg"
+                                        alt /></div>
+                                <div class="content">
+                                    <p>Acquisition<br />유입률 100% → 구매 전환율 0.3%</span></p>
+                                    <p>유입 트래픽은 높으나 초기 이탈률이 많아,<br /> 플랫폼의 첫인상 개선이 필요합니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg"></div>
+
+                            <div class="img"><img
+                                    src="https://storage.plus-ex.com/pr/img/experience/detail/km/04_img_bg_02.jpg"
+                                    alt /></div>
+                            <div class="content">
+                                <p>Activation<br />카테고리 8.71% < 검색 9.08%</p>
+                                        <p>검색에 대한 의존도가 높아, 상품 탐색과 브<br />라우징 경험을 강화할 필요가 있습니다.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg"></div>
+
+                            <div class="img"><img
+                                    src="https://storage.plus-ex.com/pr/img/experience/detail/km/04_img_bg_03.jpg"
+                                    alt /></div>
+                            <div class="content">
+                                <p>Revenue<br />상품 조회 46.8% → 구매 전환율 0.3%</p>
+                                <p>조회 대비 구매 전환율이 급격히 낮아, 장바<br />구니 및 결제 플로우 개선이 필요합니다.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg"></div>
+
+                            <div class="img"><img
+                                    src="https://storage.plus-ex.com/pr/img/experience/detail/km/04_img_bg_04.jpg"
+                                    alt /></div>
+                            <div class="content">
+                                <p>Retention<br />2일차 재방문율 2.7% → 41일차 0.5%%</p>
+                                <p>재방문율이 낮아, 재유입 유도 요소 강화와<br /> CRM 전략 보완이 필요합니다.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg"></div>
+
+                            <div class="img"><img
+                                    src="https://storage.plus-ex.com/pr/img/experience/detail/km/04_img_bg_05.jpg"
+                                    alt /></div>
+                            <div class="content">
+                                <p>Referral<br />추천 유입 사용자들의 높은 참여도</p>
+                                <p>참여도 높은 추천 유입 기반으로, 바이럴 구조<br />와 체류 시간 강화로 확산을 유도합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-container op-group">
+                    <div class="title">UX Strategy</div>
+                    <div class="content item">
+                        사용자 여정 각 단계에서 유입은 이루어졌지만, 경험은 단절되고 연결되지 않았습니다. 이에 단순 구조 개선을
+                        넘어, 브랜드·콘텐츠·상품·추천이 유기적으로 연결되는 몰입형 UX 설계가 필요했습니다. 익숙한 조작 안에서의 뜻밖의 발견과 개인화된 경험을 통해, 지속적인 참여를 유도하는
+                        플랫폼을 목표로 UX를 재설계했습니다.
+                    </div>
+                </div>
+                <div class="mySwiper y">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <span>Straightforward</span>
+                            <div class="ico">
+                                <svg viewBox="0 0 380 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="100" cy="100" r="100" fill="#391428" />
+                                    <circle cx="190" cy="100" r="69" fill="#EAEAEA" stroke="#391428" stroke-width="2" />
+                                    <circle cx="338.5" cy="100.5" r="40.5" fill="#391428" stroke="#391428"
+                                        stroke-width="2" />
+                                </svg>
+                            </div>
+                            <p>직관적인 인터페이스를 통해 사용자가 빠르<br />게 원하는 정보를 찾고 자연스럽게 목적을<br /> 달성할 수 있도록 합니다.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <span>Discovery</span>
+                            <div class="ico">
+                                <svg viewBox="0 0 412 233" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="354" cy="217.5" rx="52" ry="15.5" fill="#391428" />
+                                    <ellipse cx="58" cy="217.5" rx="52" ry="15.5" fill="#391428" />
+                                    <path
+                                        d="M68.1506 140.015C82.5417 144.97 94.6375 152.017 102.566 159.364C106.531 163.038 109.418 166.755 111.047 170.285C112.673 173.808 113.023 177.088 112.028 179.977C111.033 182.865 108.737 185.234 105.285 187.01C101.828 188.788 97.2643 189.939 91.8772 190.393C81.1052 191.301 67.2341 189.407 52.843 184.452C38.4519 179.497 26.3561 172.449 18.4277 165.102C14.4627 161.428 11.5759 157.712 9.94684 154.182C8.32072 150.658 7.97103 147.378 8.96603 144.49C9.96103 141.601 12.2566 139.232 15.7082 137.457C19.1659 135.678 23.7293 134.527 29.1164 134.073C39.8883 133.166 53.7595 135.059 68.1506 140.015Z"
+                                        fill="#EAEAEA" stroke="#391428" stroke-width="2" />
+                                    <ellipse cx="55.5" cy="24.5" rx="55.5" ry="24.5"
+                                        transform="matrix(-0.945519 0.325568 0.32569 0.945477 396 121)"
+                                        fill="#391428" />
+                                    <ellipse cx="55.5" cy="39.5" rx="55.5" ry="39.5"
+                                        transform="matrix(0.656059 0.75471 -0.754846 0.655902 100 28)" fill="#391428" />
+                                    <path
+                                        d="M276.344 70.5423C266.409 81.9703 260.741 95.1511 259.57 107.19C258.399 119.231 261.725 130.04 269.65 136.926C277.575 143.813 288.744 145.599 300.507 142.761C312.268 139.924 324.532 132.475 334.467 121.047C344.401 109.619 350.069 96.4379 351.24 84.3992C352.412 72.3581 349.086 61.5493 341.16 54.6629C333.235 47.7764 322.066 45.9902 310.303 48.8281C298.543 51.6654 286.278 59.1142 276.344 70.5423Z"
+                                        fill="#EAEAEA" stroke="#391428" stroke-width="2" />
+                                    <circle cx="206" cy="55" r="55" fill="#391428" />
+                                </svg>
+                            </div>
+                            <p>콘텐츠 흐름 속에 자연스럽게 상품을 배치하<br />여 맥락에 맞는 발견을 유도하고, 사용자의<br /> 관심과 탐색을 이끌어냅니다.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <span>Context</span>
+                            <div class="ico">
+                                <svg viewBox="0 0 369 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="109" cy="205" r="65" fill="#391428" />
+                                    <path
+                                        d="M177.439 101.728C226.34 93.1056 271.358 89.7105 304.602 91.1787C321.231 91.9132 334.859 93.8623 344.538 96.9545C349.379 98.501 353.18 100.317 355.869 102.37C358.552 104.418 360.069 106.654 360.492 109.053C360.915 111.451 360.254 114.071 358.433 116.913C356.609 119.762 353.658 122.769 349.638 125.878C341.6 132.094 329.461 138.586 314.085 144.964C283.349 157.714 239.884 169.921 190.984 178.543C142.083 187.166 97.0645 190.561 63.8211 189.093C47.1913 188.358 33.5636 186.409 23.8843 183.317C19.0435 181.77 15.2427 179.954 12.554 177.901C9.87105 175.853 8.35363 173.617 7.93073 171.219C7.50784 168.82 8.16905 166.2 9.98959 163.358C11.8141 160.509 14.7645 157.503 18.7844 154.394C26.8223 148.177 38.9615 141.685 54.3373 135.307C85.0737 122.558 128.538 110.351 177.439 101.728Z"
+                                        fill="#EAEAEA" stroke="#391428" stroke-width="2" />
+                                    <circle cx="259" cy="65" r="65" fill="#391428" />
+                                </svg>
+                            </div>
+                            <p>취향에 맞는 콘텐츠와 상품을 제안함으로써 사용자의 관심과 탐색을 유도하고, 더 깊은 몰입과 지속적인 이용을 이끌어냅니다.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <span>Engagement</span>
+                            <div class="ico">
+                                <svg viewBox="0 0 380 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M190 1C182.224 1 174.71 5.00269 167.767 12.4688C160.822 19.9362 154.522 30.7962 149.211 44.2998C138.59 71.3011 132 108.672 132 150C132 191.328 138.59 228.699 149.211 255.7C154.522 269.204 160.822 280.064 167.767 287.531C174.71 294.997 182.224 299 190 299C197.776 299 205.29 294.997 212.233 287.531C219.178 280.064 225.478 269.204 230.789 255.7C241.41 228.699 248 191.328 248 150C248 108.672 241.41 71.3011 230.789 44.2998C225.478 30.7962 219.178 19.9362 212.233 12.4688C205.29 5.00269 197.776 1 190 1Z"
+                                        fill="#EAEAEA" stroke="#391428" stroke-width="2" />
+                                    <circle cx="280" cy="150" r="100" fill="#391428" />
+                                    <circle cx="41.5" cy="150.5" r="41.5" fill="#391428" />
+                                </svg>
+                            </div>
+                            <p>개인화된 경험과 지속적인 가치를 제공함으로써<br /> 사용자의 만족도를 높이고, 자발적인 재방<br />문을 유도합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="con5">
+                <div class="video-container">
+                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/video3.jpg" alt />
+                    <video width="100%" preload="" height muted playsinline loop>
+                        <source
+                            src="https://player.vimeo.com/progressive_redirect/playback/1109610246/rendition/1080p/file.mp4?loc=external&signature=62516b0481c3d0ccd75f1a479c186ed0cceb8edbd8215c70dc3e24446b20319c"
+                            type="video/mp4">
+                    </video>
+                    <!-- <div class="v-text-container">
+                        <div class="title">
+                            Scroll to discover<br />
+                            Tap to expand
+                        </div>
+                        <div class="sub">
+                            익숙한 사용 흐름 속에서, 사용자는 자연스럽게 상품을 마주하며 <br />
+                            뜻밖의 발견을 경험하게 됩니다.
+                        </div>
+                    </div> -->
+                </div>
+                <div class="text-container op-group">
+                    <div class="title">Multi Home</div>
+                    <div class="content item">
+                        KolonMall의 홈은 단순한 쇼핑 관문이 아닌, 브랜드 고유의 정체성을 담은 신선하고 몰입감 있는 경험<br />의 공간으로 재구성되었습니다. 첫 화면부터 큐레이션된
+                        콘텐츠와 비주얼이 KolonMall만의 시각과 스<br />타일로 고객에게 새로운 관점을 제시하며, 자연스럽게 탐색을 유도합니다.
+                    </div>
+                </div>
+            </div>
+            <div class="con6">
+                <div class="bg-container">
+                    <div class="img yUp"><img
+                            src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_01.png" alt /></div>
+                </div>
+                <div class="mockup-container">
+                    <div class="inner">
+                        <div class="row">
+                            <div class="mockup sample">
+                                <div class="top">
+                                    <div class="lg"></div>
+                                </div>
+                                <div class="content-body">
+                                    <div class="img"><img
+                                            src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_03.jpg" />
+                                    </div>
+                                    <div class="content">
+                                        <div class="c-logo">
+                                            <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_bg_06.png"
+                                                alt />
+                                        </div>
+                                        <div class="c-title">
+                                            계절이 바뀌는<br />
+                                            순간을 위한
+                                        </div>
+                                        <span class="c-sub">
+                                            편안하고 따뜻함을 위한 선택
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_02.png" />
+                                </div>
+                            </div>
+                            <div class="mockup sample no-line">
+                                <div class="grid-3">
+                                    <div class="product-thumb-ver-1">
+                                        <div class="product-thumb-img">
+                                            <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img-product_01.png"
+                                                alt />
+                                            <span class="olo"><img
+                                                    src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_olo.png"
+                                                    alt /></span>
+                                        </div>
+                                        <div class="row">
+                                            <span class="percent">28%</span>
+                                            <span class="price">286,000</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-thumb-ver-1">
+                                        <div class="product-thumb-img">
+                                            <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img-product_02.png"
+                                                alt />
+                                            <span class="olo"><img
+                                                    src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_olo.png"
+                                                    alt /></span>
+                                        </div>
+                                        <div class="row">
+                                            <span class="percent">15%</span>
+                                            <span class="price">199,000</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-thumb-ver-1">
+                                        <div class="product-thumb-img">
+                                            <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img-product_03.png"
+                                                alt />
+                                            <span class="olo"><img
+                                                    src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_olo.png"
+                                                    alt /></span>
+                                        </div>
+                                        <div class="row">
+                                            <span class="percent">7%</span>
+                                            <span class="price">143,000</span>
+                                        </div>
+                                    </div>
+                                    <div class="more">
+                                        자세히 보기
+                                    </div>
+                                </div>
+                                <div class="line">
+                                    <div class="img"><img
+                                            src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_05.jpg" />
+                                    </div>
+                                    <div class="top">
+                                        <div class="lg"></div>
+                                    </div>
+                                    <div class="content-body">
+
+                                    </div>
+                                    <div class="bottom">
+                                        <img
+                                            src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_02.png" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-container">
+                            <div class="content">
+                                KolonMall의 홈은 단순한 제품 전시에 그치지 않고, 고객이 브랜드를 더 깊이 이해하고 영감을 얻을 수 있도록 큐레이션된 콘텐츠를 제공합니다. 이미지를
+                                나열하는
+                                방식이 아닌, 브랜드 아이덴티티가 자연스럽게 녹아든 UI 컴포넌트를 통해 핵심 영역을 세심하게 표현하여 몰입감 있는 경험을 제공합니다. 상품, 쿠폰 등 주요
+                                콘텐츠는
+                                넛지 요소로 적극 노출해 유입을 극대화하며, 사용자는 탐색과 쇼핑을 동시에 경험할 수 있습니다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner">
+                        <div class="mockup sample">
+                            <div class="top">
+                                <div class="lg"></div>
+                            </div>
+                            <div class="content-body">
+                                <div class="img center"><img
+                                        src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_06.jpg" />
+                                </div>
+                                <div class="content">
+                                    <div class="c-logo">
+                                        <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_bg_07.png"
+                                            alt />
+                                    </div>
+                                    <div class="c-title">
+                                        Camping Guide<br />
+                                        #Outdoor
+                                    </div>
+                                    <span class="c-sub">
+                                        몸에 감기는 안정적인 아웃웨어
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_02.png" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner">
+                        <div class="row">
+                            <div class="mockup sample">
+                                <div class="top">
+                                    <div class="lg"></div>
+                                </div>
+                                <div class="content-body">
+                                    <div class="img clip">
+                                        <div class="bg-bg">
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="c-logo">
+                                            <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_bg_08.png"
+                                                alt />
+                                        </div>
+                                        <div class="c-title">
+                                            고민을 덜어줄<br />
+                                            니트 스타일링
+                                        </div>
+                                        <span class="c-sub">
+                                            언제 어디서 나 입기 좋은 니트 15% 쿠폰
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_07.png" />
+                                </div>
+                            </div>
+                            <div class="mockup sample">
+                                <div class="top">
+                                    <div class="lg"></div>
+                                </div>
+                                <div class="content-body">
+                                    <div class="time-container">
+                                        <div class="time">
+                                            <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_bg_11-1.png"
+                                                alt />
+                                        </div>
+                                        <div class="sub">
+                                            UP TO 69%
+                                        </div>
+                                    </div>
+                                    <div class="img"><img
+                                            src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_bg_11.png" />
+                                    </div>
+                                    <div class="content">
+                                        <div class="c-logo">
+                                            <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_bg_10.png"
+                                                alt />
+                                        </div>
+                                        <div class="c-title">
+                                            시즌의 마무리<br />
+                                            특별한 혜택
+                                        </div>
+                                        <span class="c-sub">
+                                            망설였던 아이템을 만나보세요
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_08.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-container">
+                            <div class="content">
+                                패널 기반 레이아웃은 사용자가 자신의 취향에 보다 빠르게 도달할 수 있도록 세심하게 설계되었습니다. GNB 상단에 배치된 전략 패널에서 베스트, 신상품,
+                                타임딜, 이벤트 등 KolonMall의 주요 콘텐츠를 간편한 스와이프를 통해 직관적으로 탐색할 수 있습니다. 명확하게 정돈된 카테고리와 콘텐츠는 고객이 원하는
+                                정보를 쉽고 빠르게 찾을 수 있도록 도와줍니다. 각 패널은 사용자의 스타일과 관심사를 반영해 쇼핑 여정을 자연스럽게 이끌며, 브랜드의 감성과 실용적 가치를
+                                함께 전달합니다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner">
+                        <div class="margin-32">
+                            <div class="fadein-2">
+                                <div class="mockup item-2">
+                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_09.jpg"
+                                        alt />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fadein-2">
+                            <div class="mockup item-2">
+                                <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/06_img_10.jpg" alt />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="con7">
+                <div class="text-container op-group">
+                    <div class="title">Wide Banner</div>
+                    <div class="content item">
+                        뷰포트를 넘어서는 와이드 배너는 몰입감 있는 시각적 경험을 제공하며, 편집된 비주얼과 텍스처 배경이<br /> 큐레이션된 상품을 효과적으로 부각시킵니다. 가로로 확장되는
+                        레이아웃은 스크롤할 때마다 새로운 발<br />견을 유도하며, 탐색의 즐거움을 더합니다.
+                    </div>
+                </div>
+                <div class="bg-container">
+                    <div class="mock">
+                        <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/07_img_01.png" alt />
+                    </div>
+                    <div class="row">
+                        <div class="img"><img
+                                src="https://storage.plus-ex.com/pr/img/experience/detail/km/07_img_02.png" alt /></div>
+                        <div class="img"><img
+                                src="https://storage.plus-ex.com/pr/img/experience/detail/km/07_img_03.png" alt /></div>
+                        <div class="img-row">
+                            <div class="fixed">
+                                <div class="bottom">
+                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/07_img_fix-bottom.png"
+                                        alt />
+                                </div>
+                                <div class="img"><img
+                                        src="https://storage.plus-ex.com/pr/img/experience/detail/km/07_img_fix-1.png"
+                                        alt /></div>
+                                <div class="content">
+                                    <div class="c-logo">
+                                        <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/07_img_special.png"
+                                            alt />
+                                    </div>
+                                    <div class="c-title">
+                                        NEW SPORTS<br />
+                                        PICKLEBALL
+                                    </div>
+                                    <span class="c-sub c-s">
+                                        TRAIL RUNNING SERIES
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="translate-x group">
+                                <div class="img-g">
+                                    <div class="bg">
+                                        <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/07_img_04-1.jpg"
+                                            alt />
+                                    </div>
+                                    <div class="row-g">
+                                        <div class="product-content grid-3">
+
+                                            <div class="product-thumb-ver-1">
+                                                <div class="product-thumb-img">
+                                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/07_img_04-2-1.png"
+                                                        alt="">
+
+                                                </div>
+                                                <div class="row">
+                                                    <span class="percent">10%</span>
+                                                    <span class="price">259,000</span>
+                                                </div>
+                                            </div>
+                                            <div class="product-thumb-ver-1">
+                                                <div class="product-thumb-img">
+                                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/07_img_04-2-2.png"
+                                                        alt="">
+
+                                                </div>
+                                                <div class="row">
+                                                    <span class="percent">18%</span>
+                                                    <span class="price">84,000</span>
+                                                </div>
+                                            </div>
+                                            <div class="product-thumb-ver-1">
+                                                <div class="product-thumb-img">
+                                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/07_img_04-2-3.png"
+                                                        alt="">
+
+                                                </div>
+                                                <div class="row">
+                                                    <span class="percent">23%</span>
+                                                    <span class="price">210,000</span>
+                                                </div>
+                                            </div>
+                                            <div class="more">
+                                                MORE CONTENTS
+                                            </div>
+                                        </div>
+                                        <div class="content-container">
+                                            <div class="one">
+                                                <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/07_img_04-2.png"
+                                                    alt />
+                                            </div>
+                                            <div class="content">
+                                                <div class="c-logo">
+                                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/07_img_special.png"
+                                                        alt />
+                                                </div>
+                                                <div class="s-title">
+                                                    START OF<br /> ADVENTURE
+                                                </div>
+                                                <span class="s-sub">
+                                                    WIND CHASER SERIES
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="img">
+                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/07_img_06.jpg"
+                                        alt />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="con8">
+                <div class="text-container op-group">
+                    <div class="title">Discover</div>
+                    <div class="content item">
+                        익숙하고 단순한 동작만으로, Discover 페이지는 KolonMall만의 새로운 쇼핑 경험을 제공합니다.<br />스크롤 한 번으로 개인화된 숏폼 콘텐츠를 만나고, 탭 한
+                        번으로
+                        상품과 콘텐츠를 자유롭게 넘나들며 탐<br />색할 수 있습니다. 고객의 취향을 기반으로, 미처 알지 못했던 브랜드를 발견하는 즐거움을 제공합니다
+                    </div>
+                </div>
+                <div class="img scrub">
+                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/08_img_01.jpg" alt class="" />
+                </div>
+            </div>
+            <div class="con9">
+                <div class="row fadein-group">
+                    <div class="phone item"><img
+                            src="https://storage.plus-ex.com/pr/img/experience/detail/km/09_img_01.png" alt /></div>
+                    <div class="phone item"><img
+                            src="https://storage.plus-ex.com/pr/img/experience/detail/km/09_img_02.png" alt /></div>
+                </div>
+                <div class="row">
+                    <div class="text op">
+                        사용자가 KolonMall의 다채로운 패션 콘텐츠를 끊김 없이 <br />
+                        탐색하고, 관련 상품으로 자연스럽게 전환할 수 있도록 <br />
+                        새로운 스크롤 방식을 도입했습니다. 기본형, 키워드형, <br />
+                        라이브형, 커뮤니티형 등 다양한 콘텐츠 포맷을 통해<br />
+                        단순한 인터랙션만으로도 풍부하고 연속적인 콘텐츠 <br />
+                        여정을 제공합니다. 상품을 발견하는 순간은 사용자의 <br />
+                        취향이 구체화되고 추천의 맥락이 형성되는 핵심 접점으로<br />
+                        정의되며, 탐색 기반의 개인화 추천은 신뢰와 만족도를 높<br />
+                        여줍니다. 이를 통해 KolonMall은 콘텐츠와 커머스의 경계<br />
+                        를 허물며 더욱 몰입감 있는 쇼핑 경험을 제공합니다.
+                    </div>
+                    <div class="fadein-group row">
+                        <div class="phone item"><img
+                                src="https://storage.plus-ex.com/pr/img/experience/detail/km/09_img_03.png" alt /></div>
+                        <div class="phone item"><img
+                                src="https://storage.plus-ex.com/pr/img/experience/detail/km/09_img_04.png" alt /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="con10">
+                <div class="col">
+                    <div class="badge">
+                        <span class="bg"></span>
+                        <span class="ico">
+                            <svg viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.47785 12.9119H3L3.26174 11.5188H5.73087L6.47248 7.4901H3.99463L4.25638 6.08805H6.7255L7.29262 3H9.36913L8.47166 6.08805H12.0651L12.6322 3H14.7L13.8025 6.08805H16L15.7383 7.4901H13.4921L12.5188 11.5188H15.0054L14.7436 12.9119H12.2658L11.7074 16H10.2591L10.8175 12.9119H6.9349L6.37651 16H4.91946L5.47785 12.9119ZM7.18792 11.5188H11.0705L11.8121 7.4901H8.16125L7.18792 11.5188Z"
+                                    fill="white" stroke="white" stroke-width="0.2"></path>
+                            </svg>
+                        </span>
+                        <span class="text">
+                            <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/10_img_01.png" alt />
+                        </span>
+                    </div>
+                    <div class="badge">
+                        <span class="bg"></span>
+                        <span class="ico">
+                            <svg viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.47785 12.9119H3L3.26174 11.5188H5.73087L6.47248 7.4901H3.99463L4.25638 6.08805H6.7255L7.29262 3H9.36913L8.47166 6.08805H12.0651L12.6322 3H14.7L13.8025 6.08805H16L15.7383 7.4901H13.4921L12.5188 11.5188H15.0054L14.7436 12.9119H12.2658L11.7074 16H10.2591L10.8175 12.9119H6.9349L6.37651 16H4.91946L5.47785 12.9119ZM7.18792 11.5188H11.0705L11.8121 7.4901H8.16125L7.18792 11.5188Z"
+                                    fill="white" stroke="white" stroke-width="0.2"></path>
+                            </svg>
+                        </span>
+                        <span class="text"><img
+                                src="https://storage.plus-ex.com/pr/img/experience/detail/km/10_img_02.png"
+                                alt /></span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/video4.jpg" alt />
+                    <video width="100%" preload="" height muted playsinline loop>
+                        <source
+                            src="https://player.vimeo.com/progressive_redirect/playback/1077186207/rendition/720p/file.mp4?loc=external&signature=b24e7ddd3462eb80fc793b7a40e09c7d73b1a708cc66f348c96dd70c51674b3f"
+                            type="video/mp4">
+                    </video>
+                </div>
+                <div class="badge oneb">
+                    <span class="bg"></span>
+                    <span class="ico"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M22.9803 1.00035L21.7206 1C20.697 1 19.8438 1.72419 19.6438 2.68584L19.6382 2.72939L18.4393 8.72077L14.873 15.8492C14.8211 15.933 14.7744 16.0223 14.7343 16.1156H9.11735C7.94923 16.1156 7 17.0614 7 18.2323V35.8668C7 37.0359 7.94868 37.9835 9.11735 37.9835H16.4164C16.4973 37.9936 16.5856 38 16.6772 38C16.7637 38 16.8506 37.995 16.9376 37.9845L36.844 37.9845C37.8307 37.9828 38.6595 37.3041 38.8935 36.3897L38.8957 36.3808L43.9357 16.2328C43.98 16.0633 44 15.8864 44 15.7142C44 14.5462 43.0537 13.5975 41.8839 13.5975H28.8786V6.89612C28.8786 3.65306 26.2242 1.00049 22.9803 1.00035ZM22.5377 9.84144L22.5426 9.80357L23.444 5.29399C24.1508 5.48606 24.6443 6.11363 24.6443 6.89552V15.7134C24.6443 16.882 25.5912 17.8301 26.7616 17.8301H39.1733L35.1905 33.7507H18.7978V17.4734L22.3542 10.3644C22.4318 10.2104 22.4992 10.0328 22.5377 9.84144ZM11.2358 20.3486H14.5633V33.7496H11.2358V20.3486Z"
+                                fill="white" />
+                        </svg></span>
+                    <span class="text"><img src="https://storage.plus-ex.com/pr/img/experience/detail/km/10_img_03.png"
+                            alt /></span>
+                </div>
+            </div>
+            <div class="con11">
+                <div class="video-container">
+                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/video5.jpg" alt />
+                    <video width="100%" preload="" height muted playsinline loop>
+                        <source
+                            src="https://player.vimeo.com/progressive_redirect/playback/1075919873/rendition/1080p/file.mp4?loc=external&signature=5392a6451d6a225f8abce1e1a632b572c2a24b1ae1fb782b2c253d991022ad47"
+                            type="video/mp4">
+                    </video>
+                </div>
+                <div class="text-container op-group">
+                    <div class="title">Magazine</div>
+                    <div class="content item">
+                        KolonMall은 에디토리얼 스타일의 레이아웃을 통해 브랜드와 상품 이야기를 큐레이션하며, 몰입감 있<br />는 탐색 경험을 제공합니다. 콜라주형과 카드형 포맷, 키워드
+                        기반의 비주얼을 활용해 각 콘텐츠의 개성<br />을 강조하고 탐색의 즐거움을 더합니다.
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="scale">
+                        <div class="screen">
+                            <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/11_img_01.jpg" alt />
+                        </div>
+                    </div>
+                    <div class="scale">
+                        <div class="screen">
+                            <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/11_img_02.jpg" alt />
+                        </div>
+                    </div>
+                    <div class="scale">
+                        <div class="screen">
+                            <div class="video-container">
+                                <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/video6.jpg" alt />
+                                <video width="100%" preload="" height muted playsinline loop>
+                                    <source
+                                        src="https://player.vimeo.com/progressive_redirect/playback/1079681014/rendition/1080p/file.mp4?loc=external&signature=bb5087539928395f96bd8d249a31d7ed641647bc83709ff08e67a6f612f51e9f"
+                                        type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mockup-container">
+                    <div class="inner">
+                        <div class="row fadein-group">
+                            <div class="item">
+                                <div class="mockup">
+                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/11_img_03.jpg"
+                                        alt />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="mockup">
+                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/11_img_04.jpg"
+                                        alt />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-container op">
+                            <div class="content">
+                                매거진 상세 페이지는 향후 확장성을 고려해 조합형 모듈화 방<br />
+                                식을 적용함으로써, 다양한 콘텐츠를 일관성 있게 운영하고 효<br />
+                                율성을 높였습니다. 콘텐츠의 키 비주얼에서 추출한 HEX 컬러<br />
+                                를 배경과 컴포넌트에 반영해, 각 콘텐츠가 고유한 개성과 톤앤<br />
+                                매너를 유지할 수 있도록 구성했습니다. KOLON MALL의 키<br />
+                                비주얼을 활용한 전시 영역의 변주는 시각적 집중도를 높이며,<br />
+                                브랜드 아이덴티티를 효과적으로 전달합니다.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner fadein-group">
+                        <div class="item">
+                            <div class="mockup">
+                                <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/11_img_05.jpg" alt />
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="mockup">
+                                <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/11_img_06.jpg" alt />
+                            </div>
+                        </div>
+                        <div class="fadein-2">
+                            <div class="mockup item-2">
+                                <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/11_img_07-1.jpg" alt />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fadeinup enter">
+                    <div class="screen"> <img
+                            src="https://storage.plus-ex.com/pr/img/experience/detail/km/11_img_08.jpg" alt=""></div>
+                </div>
+            </div>
+            <div class="con12">
+                <div class="text-container op-group">
+                    <div class="title ">OLO</div>
+                    <div class="content item">
+                        사용자의 관심사를 아카이빙하고 개인화된 추천을 제공함으로써, 단순한 ‘좋아요’ 기능을 넘어서는<br /> 풍부하고 차별화된 경험을 제공합니다. 스타일 태그를 기반으로 상품,
+                        브랜드, 콘텐츠를 하나의 페이지<br />에 유기적으로 연결해 보다 직관적인 탐색이 가능하도록 구성되어 있습니다.
+                    </div>
+                </div>
+                <div class="bg-container">
+                    <div class="img yUp"><img
+                            src="https://storage.plus-ex.com/pr/img/experience/detail/km/12_img_01.png" alt /></div>
+                </div>
+                <div class="mockup-container">
+                    <div class="inner">
+                        <div class="fadein-2">
+                            <div class="mockup item-2">
+                                <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/12_img_02.jpg" alt />
+                            </div>
+                            <div class="mockup item-2">
+                                <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/12_img_03.jpg" alt />
+                            </div>
+                        </div>
+
+                        <div class="text-container op">
+                            <div class="content">
+                                AI 기반 추천 기술을 바탕으로 OLO는 고객의 취향에 맞는 아<br />이템과 콘텐츠를 탐색하고, 관심사를 확장하며 새로운 스타일<br />을 발견할 수
+                                있는 개인화된 공간을
+                                제공합니다. 비슷한 취향을<br /> 가진 사용자들의 인사이트를 제시함으로써 KolonMall이<br /> 추구하는 ‘안목의 확장’이라는 브랜드 아이덴티티를
+                                강화하고,<br /> OLO
+                                FEED는 신뢰를 형성하며 고객 참여를 높이고 개인화된<br /> 큐레이션의 새로운 기준을 제시합니다.
+                            </div>
+                        </div>
+                        <div class="fadein-2">
+                            <div class="mockup item-2">
+                                <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/12_img_04.jpg" alt />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner-row">
+                        <div class="fadein-2">
+                            <div class="mockup item-2">
+                                <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/12_img_05.jpg" alt />
+                            </div>
+                        </div>
+                        <div class="row fadein-group">
+                            <div class="mockup item">
+                                <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/12_img_06.jpg" alt />
+                            </div>
+                            <div class="mockup item">
+                                <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/12_img_07.jpg" alt />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="con13">
+                <div class="text-container op-group">
+                    <div class="title">Purchase Flow</div>
+                    <div class="content item">
+                        KOLON MALL의 고객 여정은 직관적인 UI와 간결한 탐색 흐름을 통해 검색부터 구매까지 자연스럽게<br />
+                        이어집니다. 웹에서는 2단 레이아웃을 적용해, 좌측에서는 상품을 탐색하고 우측 고정 영역에서는 가<br />
+                        격 및 혜택 정보를 한눈에 확인할 수 있어 핵심 정보에 빠르게 접근할 수 있습니다.
+                    </div>
+                </div>
+                <div class="bg-container">
+                    <div class="img yUp"><img
+                            src="https://storage.plus-ex.com/pr/img/experience/detail/km/13_img_01.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="con14">
+                <div class="mockup-container">
+                    <div class="inner row-between">
+                        <div class="fadein-2">
+                            <div class="mockup item-2">
+                                <div class="video-container">
+                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/video7.jpg" alt />
+                                    <video width="100%" preload="" height muted playsinline loop>
+                                        <source
+                                            src=" https://player.vimeo.com/progressive_redirect/playback/1078238927/rendition/720p/file.mp4?loc=external&signature=fb1c6b00057bb3b21830ea90bdeadfecb157df771174a5fe25f1db1482529b97"
+                                            type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-container op">
+                            <div class="content">
+                                앱에서는 제한된 화면 공간을 고려해 정보의 우선순위에 따라<br />
+                                콘텐츠를 단계적으로 제공합니다. 상품 정보, 리뷰, 추천 콘텐<br />
+                                츠 등을 순차적으로 노출함으로써 사용자는 한 번에 많은 정보<br />
+                                를 받아들이지 않고도 집중도 높은 탐색이
+                                가능하며, 구매 버튼<br />
+                                과 가격 정보는 하단에 고정되어 사용자의 흐름을 방해하지 않<br />고 언제든지 쉽게 접근할 수 있도록 구성되어 있습니다.
+                            </div>
+                        </div>
+                        <div class="absolute">
+                            <div class="fadein-2">
+                                <div class="mockup item-2">
+                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/14_img_02.jpg"
+                                        alt />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row fadein-2">
+                        <div class="mockup item-2">
+                            <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/14_img_01.jpg" alt />
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="fadein">
+                        <div class="screen">
+                            <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/14_img_03.jpg" alt />
+                        </div>
+                    </div>
+                    <div class="fadein">
+                        <div class="screen">
+                            <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/14_img_04.jpg" alt />
+                        </div>
+                    </div>
+                    <div class="fadein">
+                        <div class="screen">
+                            <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/14_img_05.jpg" alt />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="con15">
+                <div class="text-container op-group">
+                    <div class="title">
+                        AI Generated Images
+                    </div>
+                    <div class="content item">
+                        AI 생성 이미지는 맞춤 키워드 프롬프트를 적용하여 KOLON MALL의 룩앤필에 적합한 비주얼을<br /> 구현하도록 설계되었습니다. 각 콘텐츠의 개성을 강조하면서도
+                        브랜드 아이덴티티인 유연한 변형을<br /> 반영해 차별성을 부각시키며, KOLON MALL만의 독특한 비주얼 언어를 확립하는데 중요한 역할을 합니다.
+                    </div>
+                </div>
+                <div class="video-container">
+                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/video8.jpg" alt />
+                    <video width="100%" preload="" height muted playsinline loop>
+                        <source
+                            src="https://player.vimeo.com/progressive_redirect/playback/1077965887/rendition/1080p/file.mp4?loc=external&signature=f8d446361762d60a3d9966a41cb10d4f88c2b22f9238cf665f705ddb378db5ae"
+                            type="video/mp4">
+                    </video>
+                </div>
+                <div class="bg-container">
+                    <div class="grid-5">
+                        <div class="item">
+                            <div class="row">
+                                <div class="circle">
+                                    <div class="circle-bg circle-scale"></div>
+                                    <div class="txt">
+                                        <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_01.png"
+                                            alt />
+                                    </div>
+                                </div>
+                                <div class="circle-img">
+                                    <div class="ani circle-scale">
+                                        <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_02.png"
+                                            alt />
+                                    </div>
+                                    <div class="txt">
+                                        Please share<br />
+                                        your favorite style<br />
+                                        with OLO
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box circle-scale">
+                                <div class="title txt">
+                                    A style that fills my taste<br />
+                                    <span>STREET</span>
+                                </div>
+                                <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_03.png" alt />
+                            </div>
+                            <div class="banner">
+                                <div class="ico">
+                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_05.png"
+                                        alt />
+                                </div>
+                                <div class="ico2">
+                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_06.png"
+                                        alt />
+                                </div>
+                                <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_04.png" alt />
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="input">
+                                <div class="line"></div>
+                                <span>Have a question you're looking for?</span>
+                                <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_07.png" alt />
+                            </div>
+                            <div class="radius-1">
+                                <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_08.jpg" alt />
+                            </div>
+                            <div class="col">
+                                <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_09.png" alt />
+                            </div>
+                            <div class="comp">
+                                <div class="row">
+                                    <div class="img">
+                                        <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_10.png"
+                                            alt />
+                                    </div>
+                                    <span>
+                                        OLO MAGAZINE<br />
+                                        Editor - Ujin
+                                    </span>
+                                </div>
+                                <div class="bg">
+                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_11.jpg"
+                                        alt />
+                                </div>
+                                <div class="bg2">
+                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_12.png"
+                                        alt />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="poster">
+                                <div class="bg"> <img
+                                        src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_13.jpg" />
+                                </div>
+                                <div class="main">
+                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_14.jpg"
+                                        alt />
+                                </div>
+                                <div class="content">
+                                    <div class="title">
+                                        <div class="img"><img
+                                                src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_15.png"
+                                                alt /></div>
+                                        <span>Archivepke</span>
+                                    </div>
+                                    <div class="sub">
+                                        <span class="ko">
+                                            하트에 일상을 더하는 아카이브앱크<br />
+                                            뉴시즌 첫 공개</span>
+                                        <div class="img"><img
+                                                src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_16.png"
+                                                alt /></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_17.png" alt />
+                        </div>
+                        <div class="item">
+                            <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_18.png" alt />
+                            <div class="group">
+                                <div class="bg">
+                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_19.jpg"
+                                        alt />
+                                </div>
+                                <div class="title">
+                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_20.png"
+                                        alt />
+                                </div>
+                                <div class="img">
+                                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_21.png"
+                                        alt />
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_22.png" alt />
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/15_img_23.png" alt />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="con16">
+                <div class="text-container op-group">
+                    <div class="title ">Style Guide</div>
+                    <div class="content item">
+                        UI 아이콘은 KOLON MALL 브랜드의 조형적 특성을 반영하여 독창적인 아이덴티티로 발전되었습니<br />다. KOLON MALL의 대표 컬러인 Dark Plum과
+                        Lime은 앱
+                        전반에 과감하게 활용되어, KOLON<br /> MALL만의 고유한 개성을 강조하고, 브랜드의 시각적 통일성을 강화하는 데 핵심적인 기여를 했습니다.
+                    </div>
+                </div>
+                <div class="video-container">
+                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/video9.jpg" alt />
+                    <video width="100%" preload="" height muted playsinline loop>
+                        <source
+                            src="https://player.vimeo.com/progressive_redirect/playback/1076616028/rendition/1080p/file.mp4?loc=external&signature=c1fdad9686c50366f958311e923e81773d5dd890e15b9243ecf3a9efa12e40d2"
+                            type="video/mp4">
+                    </video>
+                </div>
+                <div class="bg-container">
+                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/16_img_01.png" alt class="op" />
+                </div>
+                <div class="bg-container color">
+                    <div class="item">
+                        <div class="text">
+                            <span>KM Plum</span>
+                            <span>RGB 57/20/40 Hex 391428</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <span>KM Green</span>
+                            <span>RGB 195/228/14 Hex C3E40E</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <span>KM Black</span>
+                            <span>RGB 31/31/31 Hex 1F1F1F</span>
+                        </div>
+                    </div>
+                    <div class="item start">
+                        <div class="item-bg"></div>
+                        <div class="text">
+                            <span>KM Gray 6</span>
+                            <span>RGB 136/136/136 Hex 888888</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-bg"></div>
+                        <div class="text">
+                            <span>KM Gray 5</span>
+                            <span>RGB 160/160/160 Hex A0A0A0</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-bg"></div>
+                        <div class="text">
+                            <span>KM Gray 4</span>
+                            <span>RGB 204/204/204 Hex CCCCCC</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-bg"></div>
+                        <div class="text">
+                            <span>KM Gray 3</span>
+                            <span>RGB 225/225/225 Hex E1E1E1</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-bg"></div>
+                        <div class="text">
+                            <span>KM Gray 2</span>
+                            <span>RGB 245/245/245 Hex F5F5F5</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-bg"></div>
+                        <div class="text">
+                            <span>KM Gray 1</span>
+                            <span>RGB 250/250/250 Hex FAFAFA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/video10.jpg" alt />
+                    <video width="100%" preload="" height muted playsinline loop>
+                        <source
+                            src="https://player.vimeo.com/progressive_redirect/playback/1076617967/rendition/1080p/file.mp4?loc=external&signature=c6c3bcaace8b9f1726a8d748a0d808855261d3ae860bb8ab4c8d16a0989f0276"
+                            type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="con17">
+                <div class="fadeinup">
+                    <div class="bg-container">
+                        <img src="https://storage.plus-ex.com/pr/img/experience/detail/km/17_img_01.jpg" alt />
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>
+                        KolonMall Mobile APP & Web Renewal
+                    </span>
+                    <span>
+                        Creative Director<br />
+                        Kiwon Jang
+                    </span>
+                    <span>
+                        Project Director<br />
+                        Donghwan Lee
+                    </span>
+                    <span>
+                        UX Designer<br />
+                        Seunghoo Jung, Suhyun Lee, Doeun Lee, Eunjin Park
+                    </span>
+                    <span>
+                        UI Designer<br />
+                        Heewon Cho, Soyeon Park, Guhee Kim, Yujin Lee, Yoonjae Lee
+                    </span>
+                    <span>
+                        Kolon FnC<br />
+                        <span class="under">www.kolonmall.com</span><br />
+                        Appstore Playstore Instagram<br />
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"
+            integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"
+            integrity="sha512-YzMW3OzvgtVpIIPPpjnCy8wVTq5slHRrxnLH1oD5dkVjZf8+8DJYd+GYmmWXZNmroTqKXFFzFS3XZ/LBvaNgZg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            const scrollTrigger = () => {
+                const textContent = document.querySelectorAll('.text-container .content:not(.not)')
+                const mySwiperX = document.querySelector('.mySwiper.x');
+                const mySwiperY = document.querySelector('.mySwiper.y');
+                const fadein = document.querySelectorAll('.fadein:not(:has(.screen))');
+
+                const fadeInGroup = document.querySelectorAll('.fadein-group');
+                const badgeGroup = document.querySelector('.col:has(.badge)');
+                const badge = document.querySelector('.oneb');
+                const scale = document.querySelectorAll('.scale');
+                const fadeinup = document.querySelectorAll('.fadeinup');
+
+                const op = document.querySelector('.bg-container .op')
+                const opGroup = document.querySelectorAll('.text-cotainer.op');
+                const color = document.querySelector('.color');
+                const screen = document.querySelectorAll('.fadein:has(.screen)');
+                const textOp = document.querySelector('.text.op');
+                const fadein2 = document.querySelectorAll('.fadein-2')
+
+                const callback = (entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('enter');
+                            observer.unobserve(entry.target);
+                        } else {
+                            entry.target.classList.remove('enter');
+                        }
+                    });
+                };
+                
+                const observerDefault = new IntersectionObserver(callback, {
+                    root: null,
+                    threshold: 0.05,
+                });
+
+                const observerSwiper = new IntersectionObserver(callback, {
+                    root: null,
+                    threshold: 0.2,
+                });
+
+                const observerFadeinup = new IntersectionObserver(callback, {
+                    root: null,
+                    threshold: 0,
+                });
+
+                const observerColor = new IntersectionObserver(callback, {
+                    root: null,
+                    threshold: 0.58,
+                });
+
+                const observerfadein2 = new IntersectionObserver(callback, {
+                    root: null,
+                    threshold: 0.05,
+                });
+
+
+
+                textContent.forEach(el => observerDefault.observe(el));
+                observerDefault.observe(mySwiperY)
+                observerSwiper.observe(mySwiperX);
+                fadein.forEach(el => observerDefault.observe(el))
+                fadeInGroup.forEach(el => observerDefault.observe(el))
+                observerDefault.observe(badgeGroup)
+                observerDefault.observe(badge)
+                scale.forEach(el => observerDefault.observe(el))
+                fadeinup.forEach(el => observerFadeinup.observe(el))
+                observerDefault.observe(op)
+                opGroup.forEach(el => observerDefault.observe(el))
+                observerColor.observe(color)
+                screen.forEach(el => observerFadeinup.observe(el))
+                observerDefault.observe(textOp)
+                fadein2.forEach(el => observerfadein2.observe(el))
+            };
+
+            function createSwiper() {
+                document.querySelectorAll('.mySwiper').forEach((sw) => {
+                    const swiper = new Swiper(sw, {
+                        freeMode: true,
+                        slidesPerView: 'auto',
+                    })
+                })
+            }
+
+            function scrub() {
+                const scrub = gsap.utils.toArray('.scrub');
+                scrub.forEach((item) => {
+                    gsap.to(item, {
+                        scale: 1,
+                        y: '8%',
+                        ease: 'none',
+                        scrollTrigger: {
+                            trigger: item,
+                            start: () => `5% 90%`,
+                            end: () => "bottom 80%",
+                            scrub: 1.2,
+                        }
+                    });
+                })
+            }
+
+            // 이미지 전체 로딩 끝나면 로딩 해제 후 함수 실행
+            function init() {
+                const images = Array.from(document.querySelectorAll('img'));
+
+                const loadPromises = images.map(img => {
+                    return new Promise(resolve => {
+                        if (img.complete && img.naturalHeight !== 0) {
+                            resolve();
+                        }
+                        else {
+                            img.addEventListener('load', resolve);
+                        }
+                    });
+                });
+
+                Promise.all(loadPromises).then(() => {
+                    document.body.dataset.loading = 'false';
+                    scrollTrigger();
+                    initPageEvent()
+                });
+            }
+
+            function initPageEvent() {
+                gsap.registerPlugin(ScrollTrigger);
+                createSwiper()
+                scrub()
+
+                const yUp = gsap.utils.toArray('.yUp');
+                yUp.forEach((item) => {
+                    gsap.to(item, {
+                        y: 0,
+                        scale: 1,
+                        ease: 'none',
+                        scrollTrigger: {
+                            trigger: item,
+                            start: () => `top bottom`,
+                            end: () => "bottom 95%",
+                            scrub: 1.2,
+                        }
+                    });
+                })
+
+                var showroom_videos = document.querySelectorAll('video');
+
+                showroom_videos.forEach(function (video) {
+                    ScrollTrigger.create({
+                        trigger: video,
+                        start: () => 'top 95%',
+                        end: () => 'bottom 5%',
+                        markers: false,
+                        id: 'video',
+                        onToggle: function (self) {
+                            if (self.isActive) {
+                                video.play()
+                            } else {
+                                video.pause()
+                            }
+                        }
+                    });
+                });
+            }
+
+            // 예전에 pr페이지 닫기버튼 클릭시 동작하는 스크립트 였는데 이제 안쓰는거 같음 지워도될듯 (그냥 귀찮아사 안지우고 있었음)
+            $(".exper_close").click(function (event) {
+                parent.window.location.hash = '#experience';
+                return false;
+            });
+            // 예전에 키보로로 pr페이지 닫을때 동작하는 스크립트 였는데 이제 안쓰는거 같음 지워도될듯 (그냥 귀찮아사 안지우고 있었음)
+            $(document).keyup(function (e) {
+                if (e.keyCode == 27) { // escape key maps to keycode `27`
+                    parent.window.location.hash = '#experience';
+                }
+            });
+
+            // share this 클릭시  동작하는 스크립트
+            $(".shmore").click(function (event) {
+                $(".share_section").fadeIn("slow")
+                return false;
+            });
+
+            // share this 레이어 닫을때 동작하는 스크립트
+            $(".share_dim").click(function (event) {
+                $(".share_section").fadeOut("fast")
+                return false;
+            });
+
+            // share중 url복사 클릭시 동작하는 스크립트
+            $(".copylink").click(function (event) {
+                var a = $("<input>");
+                $("body").append(a);
+                a.val(parent.location.href).select();
+                document.execCommand("copy");
+                a.remove();
+                $(".copylink_pop").addClass("showp");
+                setTimeout(function () {
+                    $(".copylink_pop").removeClass("showp")
+                }, 1E3)
+                return false;
+            });
+
+            //wow.js 실행하는 스크립트
+            // var wow = new WOW();
+            // wow.init();
+
+            document.addEventListener('DOMContentLoaded', () => {
+                init()
+            })
+
+        </script>
+</body>
+
+</html>
